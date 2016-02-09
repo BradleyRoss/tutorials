@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+     It appears that ${catalina.base} is the way to
+     refer to the root of the files for the Tomcat server.
+     I'm not sure if the same would apply to other
+     application servers.
+     
+     However, when not using a Tomcat server, it is possible to change the
+     value of the catalina.home Java system variable to a different 
+     directory so that the logs will appear correctly.
+ -->
+<Configuration debug="true">
+   <Appenders>
+   <File name="default.file" FileName="/Users/bradleyross/weblogs/bradleyross-examples.log" >
+         <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
+      </PatternLayout>
+      </File>
+   </Appenders>
+   <Loggers>
+   <Root Level="trace">
+     
+      <AppenderRef ref="default.file" level="trace" />
+   </Root>
+
+   </Loggers>
+   
+</Configuration>

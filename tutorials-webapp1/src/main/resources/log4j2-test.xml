@@ -12,7 +12,7 @@
  -->
 <Configuration status="WARN">
 	<Appenders>
-		<File name="file.default" fileName="/Users/bradleyross/weblogs/bradleyross-examples.log" >
+		<File name="file.default" fileName="${sys:user.home}/weblogs/bradleyross-examples.log" >
 			<PatternLayout>
 				<Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
 			</PatternLayout>

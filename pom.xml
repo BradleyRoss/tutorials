@@ -11,5 +11,6 @@
    <modules>
       <module>tutorials-webapp1</module>
       <module>tutorials-common</module>
+      <module>tutorials-launch</module>
    </modules>
 </project>

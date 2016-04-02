@@ -11,7 +11,7 @@
  -->
 <Configuration debug="true">
    <Appenders>
-   <File name="default.file" FileName="/Users/bradleyross/weblogs/bradleyross-examples.log" >
+   <File name="default.file" FileName="${sys:user.home}/weblogs/bradleyross-examples.log" >
          <PatternLayout>
         <Pattern>%d %p %c{1.} [%t] %m %ex%n</Pattern>
       </PatternLayout>
@@ -19,10 +19,7 @@
    </Appenders>
    <Loggers>
    <Root Level="trace">
-     
       <AppenderRef ref="default.file" level="trace" />
    </Root>
-
-   </Loggers>
-   
+   </Loggers> 
 </Configuration>

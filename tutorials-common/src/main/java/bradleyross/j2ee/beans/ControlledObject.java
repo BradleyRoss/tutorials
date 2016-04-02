@@ -7,9 +7,7 @@ package bradleyross.j2ee.beans;
  */
 public class ControlledObject {
 
-	public ControlledObject() {
-		// TODO Auto-generated constructor stub
-	}
+	public ControlledObject() { ; }
 	protected int alarmState = 0;
 	/**
 	 * A value indicating the status of the object.

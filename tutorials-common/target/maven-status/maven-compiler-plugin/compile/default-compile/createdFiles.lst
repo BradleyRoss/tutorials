@@ -9,6 +9,7 @@ bradleyross/library/database/ShowProperties.class
 bradleyross/library/applets/ColorsSample$colorSet.class
 bradleyross/j2ee/servlets/CsvWriter.class
 bradleyross/sound/BeeperPanel.class
+bradleyross/library/tools/MasterIndex$Body.class
 bradleyross/common/communicationsWindow$8.class
 bradleyross/j2ee/servlets/OctetStream.class
 bradleyross/demonstrations/SwingDemo$MainPage.class
@@ -47,6 +48,7 @@ bradleyross/j2ee/tags/CenterTag.class
 bradleyross/library/helpers/DirWalker$LocalIterator.class
 bradleyross/library/helpers/WebTable.class
 bradleyross/library/applets/Concentration$secondPanel.class
+bradleyross/library/tools/MasterIndex$MainPage.class
 bradleyross/common/XmlParser$MyHandler.class
 bradleyross/library/database/TableHelper.class
 bradleyross/opensource/jfreechart/First.class
@@ -61,6 +63,7 @@ bradleyross/library/database/TableHelper$ColumnStatus.class
 bradleyross/common/communicationsWindow$3.class
 bradleyross/demonstrations/SwingDemo$GridBagDemo.class
 bradleyross/sound/BeeperPanel$6.class
+bradleyross/library/tools/MasterIndex$MenuActions.class
 bradleyross/sound/BeeperPanel$1.class
 bradleyross/j2ee/servlets/firstServlet.class
 bradleyross/library/helpers/HtmlHelpers.class
@@ -130,6 +133,7 @@ bradleyross/j2ee/servlets/FileSample.class
 bradleyross/library/helpers/RandomHelpers.class
 bradleyross/common/communicationsWindow$6.class
 bradleyross/common/processList$namePair.class
+bradleyross/library/tools/MasterIndex.class
 bradleyross/j2ee/servlets/ShowSchema.class
 bradleyross/library/helpers/ExceptionHelper$DummyExceptionProcessor.class
 bradleyross/demonstrations/showTimeZones.class

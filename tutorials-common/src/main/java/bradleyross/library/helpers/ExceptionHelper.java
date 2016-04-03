@@ -34,7 +34,7 @@ import bradleyross.library.helpers.ExceptionProcessor;
  * of the log request.
  * 
  * <p>The following is a sample log using this class.</p>
- * <p><pre>
+ * <pre>
  * 2015-11-29 19:21:03,278 INFO  [SQLExample] -       Database is now open
  *    Location where log statement called
  *            java.lang.Thread.getStackTrace(Thread.java:1589)
@@ -315,7 +315,8 @@ import bradleyross.library.helpers.ExceptionProcessor;
  *            bradleyross.library.helpers.ExceptionHelper.info(ExceptionHelper.java:372)
  *            bradleyross.library.helpers.ExceptionHelper$Tester.run(ExceptionHelper.java:577)
  *            bradleyross.library.helpers.ExceptionHelper.main(ExceptionHelper.java:645)
- * </pre></p>
+ * </pre>
+ * 
  * @author Bradley Ross
  * @see bradleyross.library.helpers.ExceptionProcessor
  * @see bradleyross.library.debugging.SQLExample

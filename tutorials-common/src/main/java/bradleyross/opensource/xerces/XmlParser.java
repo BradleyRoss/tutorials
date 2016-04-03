@@ -25,7 +25,7 @@ import java.io.FileNotFoundException;
 * <p>When constructing code using Vector classes, it is necessary to
 *    code differently for Java 5 and later versions because 
 *    version 5 introduced the idea of parameterizing Vector objects.</p>
-* <p><ul>
+* <ul>
 * <li><p>For Java 5 and later, you will see the syntax
 *     <code>Vector&lt;String&gt;</code>.  This means
 *     objects making up the Vector are all of type String.</p></li>
@@ -33,9 +33,9 @@ import java.io.FileNotFoundException;
 *     <code>Vector</code>.  This is because there is no method in
 *     the earlier versions of restricting Vectors and other list
 *     to a single class.</p></li>
-* </ul></p>
+* </ul>
 * <p>The following is an example of a file to be processed by this object.</p>
-* <p>&lt;html&gt;&lt;head&gt;&lt;/head&gt;<br />
+* <p><code>&lt;html&gt;&lt;head&gt;&lt;/head&gt;<br>
 * &lt;body&gt;aaaa&lt;/body&gt;&lt;/html&gt;</code></p>
 * @see bradleyross.demonstrations.getTags
 * @see bradleyross.demonstrations.parseFile

@@ -5,7 +5,7 @@
  *    {@link javax.servlet.http.HttpSessionListener} for 
  *    information on session listeners.</p>
  * <p>See {@link javax.servlet.ServletContextEvent} and
- *    {@link javax.servlet.ServleContextListener} for
+ *    {@link javax.servlet.ServletContextListener} for
  *    information on context listeners.</p>
  * @author Bradley Ross
  *

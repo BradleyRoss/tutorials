@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd" >
+<!--   
+      https://wiki.apache.org/logging-log4j/Log4jXmlFormat
+      https://logging.apache.org/log4j/extras/apidocs/org/apache/log4j/rolling/RollingFileAppender.html
+  -->
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  <appender name="out" class="org.apache.log4j.rolling.RollingFileAppender">
+   
+    <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+     <param name="FileNamePattern" value="${user.home}/weblogs/log4j1-%d{yyyy-MM-dd-hh}.log" />
+    </rollingPolicy>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %p %C{1} [%t] %m%n" />
+    </layout>
+ </appender> 
+
+
+
+<root>
+<priority value="debug" />
+<appender-ref ref="out" />
+</root>
+</log4j:configuration>
+
+
+

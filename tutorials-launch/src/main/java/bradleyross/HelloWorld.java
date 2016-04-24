@@ -5,9 +5,9 @@ package bradleyross;
  * <p>Since this class was set as mainClass in the pom.xml
  * for tutorials-launch, it can be executed using the
  * following command.</p>
- * <p>java -jar tutorials-launch.jar</p>
+ * <p><code>java -jar tutorials-launch.jar</code></p>
  * 
- * @author bradleyross
+ * @author Bradley Ross
  *
  */
 public class HelloWorld {

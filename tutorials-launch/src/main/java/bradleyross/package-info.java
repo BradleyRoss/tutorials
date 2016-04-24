@@ -1,8 +1,8 @@
 /**
+ * Package containing the class that is the main class of the
+ * executable jar file.
  * 
- */
-/**
- * @author bradleyross
+ * @author Bradley Ross
  *
  */
 package bradleyross;

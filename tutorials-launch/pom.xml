@@ -11,8 +11,18 @@
   <build>
   	<plugins>
   	   <plugin>
+  	   <!-- 
+  	   		This set of specifications allows you to
+  	        execute the class bradleyross.HelloWorld
+  	        using
+  	        jar -jar tutorials-launch-0.0.1-SNAPSHOT.jar
+  	        
+  	        See http://maven.apache.org/shared/maven-archiver/index.html
+  	        for more options that can be used with the archiver.
+  	    -->
   	   	<groupId>org.apache.maven.plugins</groupId>
   	   	<artifactId>maven-jar-plugin</artifactId>
+  	   	<version>2.6</version>
   	   	<configuration>
   	   		<archive>
   	   			<manifest>

@@ -20,6 +20,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/zxing/package-info.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/DatabaseExceptions.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/tools/MasterIndex.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/debugging/Log4j2Test.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/jfreechart/TimeSeriesExample2.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/CodecInfo.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/WriteToFile.java
@@ -100,6 +101,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/getTags.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/TestMail.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/jfreechart/XYChartExample.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/debugging/Log4j1Test.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/EchoBack.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/beans/LoginBean.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/poi/package-info.java
@@ -107,6 +109,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/database/ExtrasRegistration.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/database/MySQL.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/SwingDemo.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/debugging/Slf4jTest.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/SessionInformation.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/ArrayDemos.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/FrameHelpers.java

@@ -31,7 +31,7 @@ import bradleyross.library.helpers.ExceptionHelper;
  * <p>It should be noted that SQL Server does not have a BOOLEAN
  *    type but uses an integer value instead for result sets
  *    containing boolean data.  A value of 0 indicates false
- *    while a value of 1 indicates true.<p>
+ *    while a value of 1 indicates true.</p>
  * 
  * <p>The servlet uses the init parameters class, system, and account.</p>
  * <ul>
@@ -90,8 +90,9 @@ public class ShowSchema extends HttpServlet
 	 * @param title Text to appear in title
 	 * @param message Text to appear in body of message
 	 * @return HTML page
+	 * @throws IOException if io errors
 	 */
-	public String buildErrorMessage(String title, String message)
+	public String buildErrorMessage(String title, String message) throws IOException
 	{
 		StringWriter writer = new StringWriter();
 		GenericPrinter output = new GenericPrinter(writer);
@@ -295,6 +296,7 @@ public class ShowSchema extends HttpServlet
 	 * <li>account</li>
 	 * </ul>
 	 * @param configIn Servlet configuration object
+	 * @throws ServletException if servlet problem
 	 * 
 	 */
 	public void init(ServletConfig configIn) throws ServletException
@@ -324,8 +326,10 @@ public class ShowSchema extends HttpServlet
 	 * 
 	 * @param e Exception
 	 * @param output Output device for servlet writer
+	 * @param message message to be paced on error page
+	 * @throws IOException if io errors
 	 */
-	protected void ProblemFound (Exception e, GenericPrinter output, String message)
+	protected void ProblemFound (Exception e, GenericPrinter output, String message) throws IOException
 	{
 		output.println("<html><head>");
 		output.println("<title>Error encountered in processing database</title>");
@@ -348,7 +352,7 @@ public class ShowSchema extends HttpServlet
 	 * 
 	 * @param req Request information
 	 * @param res Response information
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	public void service (HttpServletRequest req,
 			HttpServletResponse res) throws IOException
@@ -460,7 +464,7 @@ public class ShowSchema extends HttpServlet
 	 * @param output Object for writing web page
 	 * @param req HTTP request information
 	 * @param res HTTP response information
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	protected void processRootPage(DatabaseProperties data, GenericPrinter output,
 			HttpServletRequest req, HttpServletResponse res) throws IOException
@@ -490,7 +494,7 @@ public class ShowSchema extends HttpServlet
 	 * @param output Object for writing web page
 	 * @param req HTTP request information
 	 * @param res HTTP response information
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	protected void processListTables(DatabaseProperties data, GenericPrinter output,
 			HttpServletRequest req, HttpServletResponse res) throws IOException
@@ -571,7 +575,7 @@ public class ShowSchema extends HttpServlet
 	 * @param output Object for writing web page
 	 * @param req HTTP request information
 	 * @param res HTTP response information
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	protected void processListViews(DatabaseProperties data, GenericPrinter output,
 			HttpServletRequest req, HttpServletResponse res) throws IOException
@@ -631,7 +635,7 @@ public class ShowSchema extends HttpServlet
 	 * @param req HTTP request information
 	 * @param res HTTP response information
 	 * 
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 * 
 	 * @see DatabaseMetaData#getProcedures(String, String, String)
 	 */	
@@ -668,7 +672,7 @@ public class ShowSchema extends HttpServlet
 	 * @param output GenericPrinter object to which material is sent
 	 * @param req HTTP request object
 	 * @param res HTTP response object
-	 * @throws IOException
+	 * @throws IOException if io problems
 	 * 
 	 * @see DatabaseMetaData#getUDTs(String, String, String, int[])
 	 */
@@ -690,7 +694,7 @@ public class ShowSchema extends HttpServlet
 	 * @param output Object for writing web page
 	 * @param req HTTP request information
 	 * @param res HTTP response information
-	 * @throws IOException
+	 * @throws IOException if io problems exist
 	 * @see DatabaseMetaData
 	 */	
 	protected void processDatabaseInformation(DatabaseProperties data, GenericPrinter output,
@@ -846,7 +850,7 @@ public class ShowSchema extends HttpServlet
 	 * @param output GenericPrinter object to which information is sent
 	 * @param req HTTP request object
 	 * @param res HTTP response object
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 * @see DatabaseMetaData#getTables(String, String, String, String[])
 	 * @see DatabaseMetaData#getColumns(String, String, String, String)
 	 * @see DatabaseMetaData#getIndexInfo(String, String, String, boolean, boolean)
@@ -927,8 +931,9 @@ public class ShowSchema extends HttpServlet
 	 * @param output Object for printing to HTML page
 	 * @param rs Result set to be processed
 	 * @return number of rows
+	 * @throws IOException if io errors
 	 */
-	protected int showResultSet(GenericPrinter output, ResultSet rs)
+	protected int showResultSet(GenericPrinter output, ResultSet rs) throws IOException
 	{
 		int counter = 0;
 		ResultSetMetaData rsmeta = null;

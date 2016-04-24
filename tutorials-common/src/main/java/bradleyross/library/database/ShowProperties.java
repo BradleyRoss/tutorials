@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.io.IOException;
 /**
  * Displays information about database.
  * @see DatabaseMetaData
@@ -26,7 +27,7 @@ public class ShowProperties
 	/**
 	 * Constructor using java.sql.Connection object.
 	 * @param conn Connection object
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public ShowProperties(Connection conn) throws SQLException
 	{
@@ -43,7 +44,7 @@ public class ShowProperties
 	/**
 	 * Constructor using my database class.
 	 * @param data Object containing database connectivity information.
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public ShowProperties(DatabaseProperties data) throws SQLException
 	{
@@ -70,9 +71,10 @@ public class ShowProperties
 	/**
 	 * Sends information on the database to the object.
 	 * @param value Object for printing information,
-	 * @throws SQLException
+	 * @throws IOException if io errors
+	 * @throws SQLException if database errors
 	 */
-	public void printInfo(PrintStream value) throws SQLException
+	public void printInfo(PrintStream value) throws SQLException, IOException
 	{
 		GenericPrinter printer = new GenericPrinter(value);
 		printInfo(printer);
@@ -80,9 +82,10 @@ public class ShowProperties
 	/**
 	 * Sends information on the database to the object.
 	 * @param value Object for printing information.
-	 * @throws SQLException
+	 * @throws IOException if io errors
+	 * @throws SQLException if database errors
 	 */
-	public void printInfo(PrintWriter value) throws SQLException
+	public void printInfo(PrintWriter value) throws SQLException, IOException
 	{
 		GenericPrinter printer = new GenericPrinter(value);
 		printInfo(printer);
@@ -90,9 +93,11 @@ public class ShowProperties
 	/**
 	 * Sends information on the database to the object.
 	 * @param printer GenericPrinter object to be used for output
-	 * @throws SQLException
+	 * @throws IOException if io errors
+	 * @throws SQLException if database errors
+	 * 
 	 */
-	public void printInfo(GenericPrinter printer) throws SQLException
+	public void printInfo(GenericPrinter printer) throws SQLException, IOException
 	{
 		printer.println("Database is " + meta.getDatabaseProductName() + " " 
 				+ Integer.toString(meta.getDatabaseMajorVersion()) + "."
@@ -111,9 +116,11 @@ public class ShowProperties
 	/**
 	 * Sends information on the database to System.out.
 	 * @see System#out
-	 * @throws SQLException
+	 * @throws IOException if io errors
+	 * @throws SQLException if database errors
+	 * 
 	 */
-	public void printInfo() throws SQLException
+	public void printInfo() throws SQLException, IOException
 	{
 		printInfo(System.out);
 	}

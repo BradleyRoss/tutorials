@@ -9,9 +9,9 @@ import java.awt.event.*;
 /**
 * Demonstrates the behavior of a scrollbar in an applet.
 * <p>This Java file can be compiled using
-*    <nobr><code>-source 1.3 -target 1.3</code></nobr>
+*    <code>-source 1.3 -target 1.3</code>
 *    so that it will run with browsers using Java Run-Time
-*    Enviroments as early as Java 1.3.  However, the current
+*    Environments as early as Java 1.3.  However, the current
 *    scripts use version 1.5 as the target.</p>
 * @author Bradley Ross
 */

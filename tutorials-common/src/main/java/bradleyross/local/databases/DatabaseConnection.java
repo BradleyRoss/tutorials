@@ -18,7 +18,7 @@ public class DatabaseConnection extends DatabaseProperties
 {
 
 	/**
-	 * 
+	 * Constructor
 	 */
 	public DatabaseConnection() 
 	{ ;	}
@@ -93,7 +93,7 @@ public class DatabaseConnection extends DatabaseProperties
 				
 	}
 	/**
-	 * @param args
+	 * @param args not used in this application
 	 */
 	public static void main(String[] args) 
 	{

@@ -174,7 +174,7 @@ public class Concentration extends JApplet
 	 * Displays messages if debugLevel is greater
 	 * than 0.
 	 * 
-	 * @param message
+	 * @param message Message to be included in error window
 	 * @see #debugLevel
 	 * @see #debugFrame
 	 */
@@ -872,6 +872,8 @@ public class Concentration extends JApplet
 	BufferedImage image2 = null;
 	/**
 	 * Constructor .
+	 * @param width number of tiles per row
+	 * @param height number of rows
 	 */
 	public Concentration(int width, int height)
 	{
@@ -879,6 +881,9 @@ public class Concentration extends JApplet
 		tilesHeight = height;
 		game = this;
 	}
+	/**
+	 * Default constructor.
+	 */
 	public Concentration()
 	{
 
@@ -890,7 +895,7 @@ public class Concentration extends JApplet
 	}
 	/**
 	 * Construct a dummy image.
-	 * @param value
+	 * @param value number to go in cell
 	 * @return Image
 	 */
 	protected BufferedImage buildTestImage (int value)

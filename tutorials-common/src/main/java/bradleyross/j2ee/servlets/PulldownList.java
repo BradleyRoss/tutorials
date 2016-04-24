@@ -41,6 +41,7 @@ public abstract class PulldownList
 	 * @param selector Option to be used in creating HTML code
 	 * @param attributes Code for additional attributes for SELECT tag
 	 * @return HTML code
+	 * @throws SQLException if database error
 	 */
 	public String singleRequest(String name, String value, String selector, String attributes) throws SQLException
 	{
@@ -81,6 +82,7 @@ public abstract class PulldownList
 	 * @param selector Option to be used in creating HTML code
 	 * @param attributes Additional attributes for SELECT tag
 	 * @return HTML code
+	 * @throws SQLException if database problems
 	 */
 	public String multipleRequest(String name, String values[], String selector, String attributes) throws SQLException
 	{
@@ -120,7 +122,7 @@ public abstract class PulldownList
 	 * @param rs Result set containing information for menu
 	 * @param selector Optional selector for controlling HTML generation
 	 * @return Text for value
-	 * @throws SQLException
+	 * @throws SQLException  if database problems
 	 */
 	protected String getValue(ResultSet rs, String selector) throws SQLException
 	{
@@ -139,7 +141,7 @@ public abstract class PulldownList
 	 * @param rs Result set containing information
 	 * @param selector Optional selector for controlling HTML generation
 	 * @return Text for caption
-	 * @throws SQLException
+	 * @throws SQLException if database problems
 	 */
 	protected String getText(ResultSet rs, String selector) throws SQLException
 	{
@@ -156,6 +158,7 @@ public abstract class PulldownList
 	/**
 	 * Creates result set that is used to generate select tag.
 	 * @return Result set
+	 * @throws SQLException if database problems
 	 */
 	protected ResultSet buildResultSet() throws SQLException
 	{
@@ -167,6 +170,7 @@ public abstract class PulldownList
 	 * 
 	 * @param name Name attribute for SELECT tag
 	 * @return HTML code
+	 * @throws SQLException if database errors
 	 */
 	public String singleRequest(String name) throws SQLException
 	{
@@ -179,6 +183,7 @@ public abstract class PulldownList
 	 * @param name Name attribute for SELECT tag
 	 * @param value Existing value for selector
 	 * @return HTML code
+	 * @throws SQLException if database errors
 	 */
 	public String singleRequest(String name, String value) throws SQLException
 	{
@@ -190,6 +195,7 @@ public abstract class PulldownList
 	 * 
 	 * @param name Name attribute for SELECT tag
 	 * @return HTML code
+	 * @throws SQLException if database problems
 	 */
 	public String multipleRequest(String name) throws SQLException
 	{
@@ -202,6 +208,7 @@ public abstract class PulldownList
 	 * @param name Name attribute for SELECT tag
 	 * @param values Existing values for items in tag
 	 * @return HTML code
+	 * @throws SQLException if database problems
 	 */
 	public String multipleRequest(String name, String[] values) throws SQLException
 	{

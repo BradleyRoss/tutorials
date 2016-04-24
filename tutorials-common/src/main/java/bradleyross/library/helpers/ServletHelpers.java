@@ -89,7 +89,7 @@ public class ServletHelpers
 	 * @param columnName Name of column to be read
 	 * @param defaultValue Default value if column in result set has a value of null
 	 * @return Character data
-	 * @throws SQLException
+	 * @throws SQLException if io errors
 	 */
 	public static String getStringValue(ResultSet rs, String columnName, String defaultValue)
 	throws SQLException
@@ -108,7 +108,7 @@ public class ServletHelpers
 	 * @param columnName Name of column to be read
 	 * @param defaultValue Default value to be used in value in database is null
 	 * @return Character data
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static String getStringValueEscaped(ResultSet rs, String columnName, String defaultValue)
 	throws SQLException
@@ -121,7 +121,7 @@ public class ServletHelpers
 	 * @param rs Result set to be read
 	 * @param columnName Name of column to be read
 	 * @return Character data from database
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static String getStringValue(ResultSet rs, String columnName) throws SQLException
 	{
@@ -135,7 +135,7 @@ public class ServletHelpers
 	 * @param rs Result set to be read
 	 * @param columnName Name of column to be read
 	 * @return Character data from database
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static String getStringValueEscaped (ResultSet rs, String columnName) throws SQLException
 	{
@@ -147,7 +147,7 @@ public class ServletHelpers
 	 * @param columnName Name of column in result set
 	 * @param defaultValue Value to be returned if value of column is null
 	 * @return Value from result set
-	 * @throws SQLException
+	 * @throws SQLException if dataase errors
 	 */
 	public static float getFloatValue(ResultSet rs, String columnName, float defaultValue)
 	throws SQLException
@@ -165,7 +165,7 @@ public class ServletHelpers
 	 * @param rs Result set from which data is to be taken
 	 * @param columnName Name of column in result set
 	 * @return Floating point value from result set
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static float getFloatValue (ResultSet rs, String columnName) throws SQLException
 	{
@@ -177,7 +177,7 @@ public class ServletHelpers
 	 * @param stmt Prepared statement
 	 * @param position Position in prepared statement
 	 * @param value Value to be used for parameter
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setChar(PreparedStatement stmt, int position, String value) throws SQLException
 	{
@@ -190,7 +190,7 @@ public class ServletHelpers
 	 * @param position Position in prepared statement
 	 * @param value Value to be used for parameter
 	 * @param toUpperCase True means strings are converted to upper case
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setChar(PreparedStatement stmt, int position, String value, boolean toUpperCase) throws SQLException
 	{
@@ -221,7 +221,7 @@ public class ServletHelpers
 	 * @param position Position in prepared statement
 	 * @param rs Result set containing value to be used for parameter
 	 * @param name Name of column in result set
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setChar (PreparedStatement stmt, int position, ResultSet rs, String name) throws SQLException
 	{
@@ -235,7 +235,7 @@ public class ServletHelpers
 	 * @param rs Result set containing value to be used for parameter
 	 * @param name Name of column in result set
 	 * @param toUpperCase True means strings are converted to upper case
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setChar (PreparedStatement stmt, int position, ResultSet rs, String name, boolean toUpperCase) throws SQLException
 	{
@@ -267,7 +267,7 @@ public class ServletHelpers
 	 * @param stmt Prepared statement
 	 * @param position Position in prepared statement
 	 * @param value Value to be used for parameter
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setVarchar(PreparedStatement stmt, int position, String value) throws SQLException
 	{
@@ -280,7 +280,7 @@ public class ServletHelpers
 	 * @param position Position in prepared statement
 	 * @param value Value to be used for parameter
 	 * @param toUpperCase True means that strings are converted to upper case
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setVarchar(PreparedStatement stmt, int position, String value, boolean toUpperCase) throws SQLException
 	{
@@ -311,7 +311,7 @@ public class ServletHelpers
 	 * @param position Position in prepared statement
 	 * @param rs Result set containing value to be used for parameter
 	 * @param name Name of column in result set
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setVarchar (PreparedStatement stmt, int position, ResultSet rs, String name) throws SQLException
 	{
@@ -325,7 +325,7 @@ public class ServletHelpers
 	 * @param rs Result set containing value to be used for parameter
 	 * @param name Name of column in result set
 	 * @param toUpperCase True means that strings are to be converted to upper case
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setVarchar (PreparedStatement stmt, int position, ResultSet rs, String name, boolean toUpperCase) throws SQLException
 	{
@@ -357,7 +357,7 @@ public class ServletHelpers
 	 * @param stmt Prepared statement
 	 * @param position Position in prepared statement
 	 * @param value Value to be used for parameter
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setFloat(PreparedStatement stmt, int position, Float value) throws SQLException
 	{
@@ -377,7 +377,7 @@ public class ServletHelpers
 	 * @param position Position in prepared statement
 	 * @param rs Result set containing value to be used for parameter
 	 * @param name Name of column in result set
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setFloat (PreparedStatement stmt, int position, ResultSet rs, String name) throws SQLException
 	{
@@ -397,7 +397,7 @@ public class ServletHelpers
 	 * @param stmt Prepared statement
 	 * @param position Position in prepared statement
 	 * @param value Value to be used for parameter
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public static void setInteger(PreparedStatement stmt, int position, Integer value) throws SQLException
 	{
@@ -417,7 +417,7 @@ public class ServletHelpers
 	 * @param position Position in prepared statement
 	 * @param rs Result set containing value to be used for parameter
 	 * @param name Name of column in result set
-	 * @throws SQLException
+	 * @throws SQLException  if database errors
 	 */
 	public static void setInteger (PreparedStatement stmt, int position, ResultSet rs, Integer name) throws SQLException
 	{

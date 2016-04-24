@@ -136,7 +136,7 @@ public class ThisPage
 	 * <p>The only public means of calling this method is to use
 	 *    {@link #sendContents()}.</p>
 	 * @return PrintWriter object
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	protected PrintWriter getWriter() throws IOException
 	{
@@ -149,6 +149,8 @@ public class ThisPage
 	/**
 	 * Send the contents of the StringWriter object to
 	 * the response object.
+	 * 
+	 * @throws IOException if database appear
 	 */
 	public void sendContents() throws IOException
 	{
@@ -160,6 +162,13 @@ public class ThisPage
 	 */
 	public ThisPage()
 	{ ; }
+	/**
+	 * 
+	 * @param requestValue request object
+	 * @param responseValue response object
+	 * @param configValue servlet config object
+	 * @throws IOException if io errors
+	 */
 	public ThisPage(HttpServletRequest requestValue, HttpServletResponse responseValue, ServletConfig configValue)
 	throws IOException
 	{
@@ -246,7 +255,7 @@ public class ThisPage
 	 *    messages can not be used.</p>
 	 *    
 	 * @return ServletOutputStream object
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	public ServletOutputStream getOutputStream() throws IOException
 	{
@@ -314,7 +323,7 @@ public class ThisPage
 	 * 
 	 * @see #addMessage(String)
 	 * @see #addException(Exception)
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	public void errorMessage() throws IOException
 	{
@@ -501,7 +510,7 @@ public class ThisPage
 	/**
 	 * Set the mode of operation
 	 * @param value Mode of operation
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	public void setMode (int value) throws IOException
 	{

@@ -22,20 +22,20 @@ import java.util.Enumeration;
 *   for the application server and the WEB-INF/web.xml file that exists for
 *   each web application.  The following is the WEB-INF/web.xml file
 *   that was used with this servlet.</p>
-* <p><code><pre>
-* &lt;web-app&gt;
-* &lt;servlet&gt;
-* &lt;servlet-name&gt;first&lt;/servlet-name&gt;
-* &lt;servlet-class&gt;bradleyross.servlets.firstServlet&lt;/servlet-class&gt;
-* &lt;/servlet&gt;
-* &lt;servlet-mapping&gt;
-* &lt;servlet-name&gt;first&lt;/servlet-name&gt;
-* &lt;url-pattern&gt;/firstServlet&lt;/url-pattern&gt;
-* &lt;/servlet-mapping&gt;
+* <p><code>
+* &lt;web-app&gt;<br>
+* &lt;servlet&gt;<br>
+* &lt;servlet-name&gt;first&lt;/servlet-name&gt;<br>
+* &lt;servlet-class&gt;bradleyross.servlets.firstServlet&lt;/servlet-class&gt;<br>
+* &lt;/servlet&gt;<br>
+* &lt;servlet-mapping&gt;<br>
+* &lt;servlet-name&gt;first&lt;/servlet-name&gt;<br>
+* &lt;url-pattern&gt;/firstServlet&lt;/url-pattern&gt;<br>
+* &lt;/servlet-mapping&gt;<br>
 * &lt;/web-app&gt;
-</pre></code></p>
+* </code></p>
 *<p>The meaning of this XML document is as follows.</p>
-*<p><ul>
+* <ul>
 *<li><p>The servlet is named <code>first</code>
 *       (<code>servlet-name</code>).  This name doesn't appear
 *       in the Java code but is means of describing the configuration to
@@ -51,7 +51,7 @@ import java.util.Enumeration;
 *       (<code>servlet-mapping</code>).  This is known as the
 *       servlet path, meaning that it refers to the path
 *       within the web application.</p></li>
-*</ul></p>
+*</ul>
 *<p>The web application is contained in the directory
 *   <code>webapps/test</code> on the application server, meaning that the
 *   XML file is at <code>webapps/test/WEB-INF/web.xml</code>.  Unless

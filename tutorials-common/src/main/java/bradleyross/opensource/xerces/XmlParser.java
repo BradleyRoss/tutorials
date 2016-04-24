@@ -47,7 +47,9 @@ public class XmlParser
 {
 /** Indicates mode of parsing operation. */
 private int mode;
-/** Getter for mode */
+/** Getter for mode
+ * @return value of {@link #mode}
+ */
 public int getMode()
 	{ return mode; }
 /** Option for listing tags in document. */

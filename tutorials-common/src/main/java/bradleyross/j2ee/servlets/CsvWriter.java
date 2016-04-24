@@ -313,6 +313,8 @@ public abstract class CsvWriter extends HttpServlet
 			}
 	/**
 	 * Obtain the database connection information.
+	 * @return database information object
+	 * @throws IOException if io errors
 	 */
 	protected abstract bradleyross.library.database.DatabaseProperties
 	makeConnection() throws IOException;
@@ -325,7 +327,9 @@ public abstract class CsvWriter extends HttpServlet
 	 *    the ResultSet object.  The service method then stores the result of this method 
 	 *    in the Instance object.</p>
 	 * @param req Request information
+	 * @param data database object
 	 * @return Result set
+	 * @throws IOException if io errors
 	 * @see Instance#message
 	 * @see Instance#outputFilename
 	 */
@@ -335,12 +339,14 @@ public abstract class CsvWriter extends HttpServlet
 	 * Sets values in Instance object.
 	 * <p>This must be overridden in a subclass in order to set parameters.</p>
 	 * @param instance Instance object being affected
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io errors
 	 */
 	protected void setValues(Instance instance) throws java.io.IOException
 	{ ; }
 	/**
 	 * Will print header line for CSV file.
+	 * @param instance instance of code processing request
+	 * @throws IOException if io error
 	 */
 	protected void printHeader (Instance instance)
 	throws java.io.IOException
@@ -365,6 +371,8 @@ public abstract class CsvWriter extends HttpServlet
 	 * <p>This method will be changed at a later time to allow the
 	 *    specification of overriding methods for formatting timestamps,
 	 *    integers, floating point numbers, character strings, etc.</p>
+	 * @param instance instance of object processing request
+	 * @throws IOException if io error
 	 */
 	protected void printLine (Instance instance)
 	throws java.io.IOException

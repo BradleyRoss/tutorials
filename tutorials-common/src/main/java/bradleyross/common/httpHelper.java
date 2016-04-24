@@ -1,6 +1,7 @@
 package bradleyross.common;
 import java.io.*;
 import java.net.*;
+import java.io.IOException;
 /**
  * Provide a set of methods that will help in processing
  * the contents of web pages.
@@ -50,6 +51,9 @@ public class httpHelper
 	 * @param port Port number for web server
 	 * @param fileName Directory and name for web page (No leading slash.
 	 *   e.g. index.html)
+	 * @return string containing contents of web page
+	 * @throws java.io.IOException if IO error occurs
+	 * 
 	 * @see java.net.Socket
 	 */
 	public String readHttpPage(String host, int port, String fileName)

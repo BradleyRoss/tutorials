@@ -2,32 +2,33 @@ package bradleyross.library.helpers;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.ResultSetMetaData;
-public abstract class WebTable implements TableInterface 
+import java.io.IOException;
+public abstract class WebTable implements TableInterface
 {
 	protected GenericPrinter output = null;
 	protected int debugLevel = 0;
 	protected int columnCount = 0;
 	protected int rowCount = 0;
-	public void finishRow()
+	public void finishRow() throws IOException
 	{
 		output.println("</tr>");
 	}
-	public void finishTable() 
+	public void finishTable() throws IOException
 	{
 		output.println("</table>");
 
 	}
-	public void formatCell(Object value)
+	public void formatCell(Object value) throws IOException
 	{
 		formatCell(value, NORMAL);
 	}
-	public void formatCell(Object value, int format) 
+	public void formatCell(Object value, int format) throws IOException
 	{
 		output.println("<td>" + value.toString() + "</td>");
 
 	}
 
-	public void formatDataRow(Object...values)
+	public void formatDataRow(Object...values) throws IOException
 	{
 		startRow();
 		for (int i = 0; i < values.length; i++)
@@ -36,7 +37,7 @@ public abstract class WebTable implements TableInterface
 		}
 		finishRow();
 	}
-	public void formatDataRow(ResultSet rs) throws SQLException
+	public void formatDataRow(ResultSet rs) throws SQLException, IOException
 	{
 		startRow();
 		for (int i = 1; i <= getColumnCount(); i++)
@@ -46,7 +47,7 @@ public abstract class WebTable implements TableInterface
 		finishRow();
 	}
 
-	public void formatHeaderRow(Object... values)
+	public void formatHeaderRow(Object... values) throws IOException
 	{
 		startRow();
 		for (int i = 0; i < values.length; i++)
@@ -55,7 +56,7 @@ public abstract class WebTable implements TableInterface
 		}
 		finishRow();
 	}
-	public void formatHeaderRow(ResultSet rs) throws SQLException
+	public void formatHeaderRow(ResultSet rs) throws SQLException, IOException
 	{
 		ResultSetMetaData meta = rs.getMetaData();
 		startRow();
@@ -85,12 +86,12 @@ public abstract class WebTable implements TableInterface
 		debugLevel = value;
 
 	}
-	public void startRow()
+	public void startRow() throws IOException
 	{
 		rowCount++;
 		output.println("<tr>");
 	}
-	public void startTable() 
+	public void startTable() throws IOException
 	{
 		output.println("<table border=\"1\">");
 

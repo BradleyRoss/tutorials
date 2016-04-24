@@ -52,7 +52,7 @@ public class ToneGenerator extends JApplet {
 	}
 	/**
 	 * Executed when class is called as a Java application.
-	 * @param args
+	 * @param args not used in this case
 	 */
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {

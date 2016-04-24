@@ -46,7 +46,7 @@ public abstract class Servlet extends HttpServlet
 		 * @param request HttpServletRequest object
 		 * @param response HttpServletResponse object
 		 * @param config ServletConfig object
-		 * @throws IOException
+		 * @throws IOException if io errors
 		 */
 		public ThisPage(HttpServletRequest request, HttpServletResponse response, ServletConfig config)
 		throws IOException
@@ -70,7 +70,7 @@ public abstract class Servlet extends HttpServlet
 	 * Called when initializing the object for handling HTTP
 	 * transactions.
 	 * @param configValue Servlet configuration object
-	 * @throws ServletException
+	 * @throws ServletException when problems with servlet arise
 	 */
 	public void init(ServletConfig configValue) throws ServletException
 	{
@@ -93,7 +93,7 @@ public abstract class Servlet extends HttpServlet
 	 * 
 	 * @param requestValue Request object
 	 * @param responseValue Response object
-	 * @throws IOException
+	 * @throws IOException for io problems
 	 */
 	public void service (HttpServletRequest requestValue, HttpServletResponse responseValue)
 	throws IOException
@@ -122,7 +122,7 @@ public abstract class Servlet extends HttpServlet
 	 * 
 	 * @see #processor(ThisPage)
 	 * @param thisPage Information on this HTTP transaction
-	 * @throws IOException
+	 * @throws IOException for io problems
 	 */
 	public void starter(ThisPage thisPage) throws IOException
 	{ 
@@ -140,7 +140,7 @@ public abstract class Servlet extends HttpServlet
 	 * 
 	 * @see #processor(ThisPage)
 	 * @param thisPage Information on this HTTP transaction
-	 * @throws IOException
+	 * @throws IOException for io problems
 	 */
 	public void ender(ThisPage thisPage) throws IOException
 	{ 
@@ -154,7 +154,7 @@ public abstract class Servlet extends HttpServlet
 	 * Class specific processing for this class.
 	 * 
 	 * @param thisPage Information on this HTTP transaction
-	 * @throws IOException
+	 * @throws IOException for io problems
 	 */
 	protected abstract void processor(ThisPage thisPage) throws IOException;
 	/**
@@ -233,7 +233,7 @@ public abstract class Servlet extends HttpServlet
 	 * @see Date#toString()
 	 * <p>It appears that SQL Server is unable to handle dates before the
 	 *    year 1900.</p>
-	 * @throws SQLException
+	 * @throws IOException for io problems
 	 */
 	public static String buildEscapeDate(int year, int month, int day) throws IOException
 	{
@@ -267,7 +267,7 @@ public abstract class Servlet extends HttpServlet
 	 * @param day String containing the day of month as an integer from 1 to 31
 	 * @return Date in escape format
 	 * @see Date#toString()
-	 * @throws IOException
+	 * @throws IOException for io problems
 	 */
 	public static String buildEscapeDate(String year, String month, String day) throws IOException
 	{
@@ -331,7 +331,7 @@ public abstract class Servlet extends HttpServlet
 	 * @see Date#toString()
 	 * <p>It appears that SQL Server is unable to handle dates before the
 	 *    year 1900.</p>
-	 * @throws SQLException
+	 * @throws IOException for io problems
 	 */
 	public static String buildEscapeDate(int year, int month, int day, String defaultDate) throws IOException
 	{
@@ -363,7 +363,7 @@ public abstract class Servlet extends HttpServlet
 	 * @param defaultDate Date to use if error in processing
 	 * @return Date in escape format
 	 * @see Date#toString()
-	 * @throws IOException
+	 * @throws IOException for io problems
 	 */
 	public static String buildEscapeDate(String year, String month, String day, String defaultDate) throws IOException
 	{
@@ -436,7 +436,7 @@ public abstract class Servlet extends HttpServlet
 	 * @param stmt PreparedStatement object
 	 * @param location Number of parameter
 	 * @param value Value to be loaded in parameter
-	 * @throws SQLException
+	 * @throws SQLException if problems in SQL statement
 	 */
 	protected void loadChar(PreparedStatement stmt, int location, String value) throws SQLException
 	{
@@ -467,9 +467,10 @@ public abstract class Servlet extends HttpServlet
 	 * @param stmt PreparedStatement object
 	 * @param location Number of parameter
 	 * @param value Value to be loaded in parameter
-	 * @throws SQLException
+	 * @throws SQLException for SQL problems
+	 * @throws IOException for io problems
 	 */
-	protected void loadVarchar(PreparedStatement stmt, int location, String value) throws SQLException
+	protected void loadVarchar(PreparedStatement stmt, int location, String value) throws SQLException, IOException
 	{
 		if (value == null)
 		{

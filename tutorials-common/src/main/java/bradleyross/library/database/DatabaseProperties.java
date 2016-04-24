@@ -125,7 +125,7 @@ public abstract class DatabaseProperties
 	/**
 	 * Get value of extras.
 	 * @return DatabaseExtras object being used.
-	 * @throws NotSupportedException
+	 * @throws NotSupportedException if not supported for database
 	 * @see #extras
 	 */
 	public DatabaseExtras getDatabaseExtras() throws NotSupportedException
@@ -183,12 +183,13 @@ public abstract class DatabaseProperties
 	protected String systemName = null;
 	/**
 	 * Name of the handler class for the database.
-	 * <p><table border>
-	 * <tr><td>Product</td><td>Handler Class</td><td>Default<br />Port</td></tr>
+	 * <table>
+	 * <caption>Database driver classes</caption>
+	 * <tr><td>Product</td><td>Handler Class</td><td>Default<br>Port</td></tr>
 	 * <tr><td>MySQL</td><td><code>com.mysql.jdbc.Driver</code></td><td>3306</td></tr>
 	 * <tr><td>Oracle</td><td><code>oracle.jdbc.driver.OracleDriver</code></td><td>1521</td></tr>
 	 * <tr><td>SQL Server</td><td><code>com.microsoft.sqlserver.jdbc.SQLServerDriver</code></td><td>1433</td></tr>
-	 * </table></p>
+	 * </table>
 	 * <p>It may be necessary to use the name of the handlerClass in
 	 *    generating the SQL statements, since the syntax for different
 	 *    databases such as MySQL, Oracle, DB2, Postgres, etc. differ for
@@ -215,7 +216,8 @@ public abstract class DatabaseProperties
 	 *    of the database manager product.  The remaining
 	 *    tokens are dependent on the DBMS package used.</p>
 	 * <p>The following are examples of connection strings.</p>
-	 * <table border>
+	 * <table>
+	 * <caption>Formats for database connection strings</caption>
 	 * <tr><td>MySQL</td>
 	 *     <td><code>jdbc:mysql://server.foo.com/alpha</code></td>
 	 *     <td>alpha is default database</td>
@@ -359,6 +361,7 @@ public abstract class DatabaseProperties
 	 * <p>The database name is extracted from the 
 	 *    <a href="#connectionString">connection string</a>
 	 *    as the second token of the string.</p>
+	 * @return DBMS descriptor
 	 */
 	public String getDbms()
 	{
@@ -391,6 +394,7 @@ public abstract class DatabaseProperties
 	}
 	/**
 	 * Open the database connection.
+	 * @throws SQLException exception encountered while connecting
 	 */
 	public void connect() throws java.sql.SQLException
 	{
@@ -445,6 +449,7 @@ public abstract class DatabaseProperties
 	}
 	/**
 	 * Close the database connection.
+	 * @throws SQLException  if database error
 	 */
 	public void close() throws SQLException
 	{
@@ -469,6 +474,8 @@ public abstract class DatabaseProperties
 	 * <p>This method is usually used to make updates to the
 	 *    database.</p>
 	 * @param sqlCode SQL code to be executed.
+	 * @return record count
+	 * @throws SQLException exceptions encountered while running update
 	 */
 	public int executeUpdate(String sqlCode) throws SQLException
 	{
@@ -515,6 +522,7 @@ public abstract class DatabaseProperties
 	 *    of leaving a statement open if it returns multiple rows.</p>
 	 * @param sqlCode SQL code to be executed.
 	 * @return String object continuing result of SQL query
+	 * @throws SQLException exceptions encountered while executing query
 	 */
 	public String executeSimpleQuery(String sqlCode) 
 	throws SQLException
@@ -563,6 +571,7 @@ public abstract class DatabaseProperties
 	 * ResultSet.
 	 * @param sqlCode SQL code to be executed.
 	 * @return ResultSet
+	 * @throws SQLException exceptions encountered while executing query
 	 */
 	public java.sql.ResultSet executeQuery(String sqlCode) 
 	throws java.sql.SQLException
@@ -796,7 +805,7 @@ public abstract class DatabaseProperties
 	 * Generate a prepared statement for this database.
 	 * @param query SQL Query to be used in statement
 	 * @return PreparedStatement object
-	 * @throws java.sql.SQLException
+	 * @throws java.sql.SQLException if database errors
 	 */
 	public java.sql.PreparedStatement prepareStatement(String query)
 	throws java.sql.SQLException
@@ -1455,7 +1464,7 @@ public abstract class DatabaseProperties
 	 * @param columnNames Array containing column names in the database
 	 *        table for the columns to be populated with data.
 	 * @param value Values to be inserted in the columns
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 * @deprecated
 	 */
 	public void insertRow (String tableName,
@@ -1473,7 +1482,7 @@ public abstract class DatabaseProperties
 	 * @param columnCount Number of columns in primary key.  These are the first
 	 *        columns in the list.
 	 * @param value Values to be inserted in the columns
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public void insertRowWithKeys (String tableName,
 			String columnNames[], int columnCount, Object... value) throws SQLException

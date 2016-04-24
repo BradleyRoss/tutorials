@@ -7,13 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
  * Demonstration of sending mail using Java.
- *<p><ul>
+ *<ul>
  *<li><p>First parameter - domain name for SMTP (RFC 822) server.</p></li>
  *<li><p>Second parameter - Email address to use for destination</p></li>
  *<li><p>Third parameter - Text to go with Email address</p></li>
  *<li><p>Fourth parameter - Email address of sender</p></li>
  *<li><p>Fifth parameter - Text to go with e-mail address of sender</p></li>
- *</ul></p>
+ *</ul>
  *<p>Example:<br>
  *<code>bradleyross.demonstrations.testMail "smtp.foo.com"
  *  "john.smith@foo.com" "John Smith" "bob.jones@foo.com" "Bob Jones"</code></p>

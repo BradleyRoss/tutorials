@@ -255,6 +255,8 @@ protected void windowResizer()
 /**
 * This method generates a message and adds it to the
 * log and the Sys.output character stream.
+* 
+* @param display name to be used on window
 */
 protected void addMessage (String display)
    {
@@ -271,6 +273,8 @@ protected void addMessage (String display)
 * <p>If the Return key is depressed, the contents of
 *    bottomWindow are sent to the remote system and
 *    contents of bottomWindow are erased.</p>
+*    
+* @param e event to be processed
 */
 protected void processKey (KeyEvent e)
    {
@@ -314,6 +318,8 @@ public communicationsWindow(String name)
 * <p>A value of 0 means no messages are to be printed. Higher
 *    values generate larger amounts of messages.
 *    </p>
+*    
+* @param level value to be used for debugLevel.
 */
 public void setDebugLevel (int level)
    {
@@ -324,6 +330,8 @@ public int getDebugLevel ()
 /**
 * This is the main method for creating the communications
 * window and setting up the communications stream.
+* 
+* @param inputSock socket to be used for communications
 */
 public void start (Socket inputSock)
    {

@@ -244,6 +244,7 @@ public class UploadServlet extends HttpServlet
 		 *    @param value1 Request object
 		 *    @param value2 Response object
 		 *    @param value3 Servlet configuration object
+		 *    @throws IOException if io errors
  		 *    
 	     */
 		public ThisPage (HttpServletRequest value1, HttpServletResponse value2, ServletConfig value3)
@@ -576,7 +577,7 @@ public class UploadServlet extends HttpServlet
 	 *    
 	 * @param req Request object
 	 * @param res Response object
-	 * @throws IOException
+	 * @throws IOException if io problems
 	 */
 	public void service (HttpServletRequest req,
 			HttpServletResponse res)
@@ -718,8 +719,9 @@ public class UploadServlet extends HttpServlet
 	 *    
 	 * @param input Object from which data is read
 	 * @param thisPage Object containing information for this request
+	 * @param encoding type of character encoding to be used
 	 * @return Byte array for this part of request
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	protected byte[] readPart(ServletInputStream input, ThisPage thisPage, String encoding)
 	throws IOException
@@ -902,7 +904,7 @@ public class UploadServlet extends HttpServlet
 	 * @param element Name of the part in the multi-part form
 	 * @param convertFlag True means that value should be converted to upper case
 	 * @param SQLType Type of SQL column (Types.CHAR or Types.VARCHAR)
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public void loadByteArray(DatabaseProperties data, PreparedStatement stmt, ThisPage thisPage,
 			int position, String element, boolean convertFlag, int SQLType) throws SQLException
@@ -949,7 +951,7 @@ public class UploadServlet extends HttpServlet
 	 * @param position Position of the value in the prepared statement's argument list
 	 * @param element Name of the part in the multi-part form
 	 * @param convertFlag True means that value should be converted to upper case
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public void loadByteArray(DatabaseProperties data, PreparedStatement stmt, ThisPage thisPage,
 			int position, String element, boolean convertFlag) throws SQLException
@@ -964,7 +966,7 @@ public class UploadServlet extends HttpServlet
 	 * @param thisPage Object representing this request
 	 * @param position Position of the value in the prepared statement's argument list
 	 * @param element Name of the part in the multi-part form
-	 * @throws SQLException
+	 * @throws SQLException if database errors
 	 */
 	public void loadByteArray(DatabaseProperties data, PreparedStatement stmt, ThisPage thisPage,
 			int position, String element) throws SQLException
@@ -980,6 +982,7 @@ public class UploadServlet extends HttpServlet
 	 *    for the various web pages.</p>
 	 *    
 	 * @param thisPage Information on this HTTP request
+	 * @throws IOException if io errors
 	 */
 	protected void starter(ThisPage thisPage) throws IOException
 	{
@@ -990,8 +993,9 @@ public class UploadServlet extends HttpServlet
 	 * to be carried out after running the main program.
 	 * 
 	 * @param thisPage Information on this HTTP transaction
+	 * 
 	 */
-	protected void ender(ThisPage thisPage) throws IOException
+	protected void ender(ThisPage thisPage) 
 	{ 
 		;
 	}
@@ -1004,6 +1008,7 @@ public class UploadServlet extends HttpServlet
 	 * <p>For the result of File requests, write the contents to a file.</p>
 	 * <p>I am having a problem with the loading of binary files.</p>
 	 * @param thisPage Information on this HTTP request
+	 * @throws IOException if io errors
 	 */
 	protected void processor(ThisPage thisPage) throws IOException
 	{

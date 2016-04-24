@@ -264,7 +264,7 @@ public class CodecInfo extends HttpServlet {
 	}
 	/**
 	 * Test driver.
-	 * @param args
+	 * @param args not used in this program
 	 */
 	public static void main(String[] args) {
 		CodecInfo instance = new CodecInfo();

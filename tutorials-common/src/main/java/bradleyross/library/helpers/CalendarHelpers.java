@@ -107,7 +107,8 @@ public class CalendarHelpers
 		return local.getTime();
 	}
 	/**
-	 * @param args
+	 * Test driver.
+	 * @param args not used in this program
 	 */
 	public static void main(String[] args) 
 	{

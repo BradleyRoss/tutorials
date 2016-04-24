@@ -45,7 +45,7 @@ abstract class DatabaseExtras
 	/**
 	 * Array containing valid codes for database specific terms.
 	 * <table border="1">
-
+	 * <caption>Valid terms for queries</caption>
 	 * <tr><td><code>CURRENTTIME</code></td><td>Database specific term for obtaining current
 	 *     date and time to be used as the value of a column.</td></tr>
 	 * <tr><td><code>CURRENTDATE</code></td><td>Database specific term for obtaining current
@@ -60,8 +60,6 @@ abstract class DatabaseExtras
 	 *     precision floating point values.</td></tr>
 	 * <tr><td><code>LONGBLOB</code></td><td>Data type for very long binary objects.</td></tr>
 	 * <tr><td><code>LONGCLOB</code></td><td>Data type for very long character objects.</td></tr>
-	 * 
-	 * 
 	 * </table>
 	 */
 	protected String[] validTerms = { "CURRENTDATE", "CURRENTTIME", 

@@ -20,7 +20,7 @@ import java.util.Vector;
  * Demonstrates using a Java applet to display web pages in windows
  *    on the browser.
  * <p>This Java file can be compiled using
- *    <nobr><code>-source 1.3 -target 1.3</code></nobr>
+ *    <code>-source 1.3 -target 1.3</code>
  *    so that it will run with browsers using Java Run-Time
  *    Environments as early as Java 1.3.  However, the standard
  *    script now uses version 1.5 as the standard.</p>

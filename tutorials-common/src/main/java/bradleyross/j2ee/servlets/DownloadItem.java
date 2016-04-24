@@ -24,7 +24,7 @@ public class DownloadItem extends Servlet
 	 * <p>This method will be overridden to produce meaningful classes.</p>
 	 * 
 	 * @param thisPage Object containing information on this HTTP transaction
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	protected  void processor(ThisPage thisPage) throws IOException
 	{
@@ -45,7 +45,7 @@ public class DownloadItem extends Servlet
 	 * 
 	 * @param req HTTP request object
 	 * @param res HTTP response object
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	public void service (HttpServletRequest req,
 			HttpServletResponse res)

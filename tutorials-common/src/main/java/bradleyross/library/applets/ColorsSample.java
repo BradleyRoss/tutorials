@@ -12,9 +12,9 @@ import java.awt.event.ActionEvent;
 * Demonstrates the use of buttons to change the colors on the
 * items in a graphic item.
 * <p>This Java file can be compiled using
-*    <nobr><code>-source 1.3 -target 1.3</code></nobr>
+*    <code>-source 1.3 -target 1.3</code>
 *    so that it will run with browsers using Java Run-Time
-*    Enviroments as early as Java 1.3.  However, the standard
+*    Environments as early as Java 1.3.  However, the standard
 *    script now uses version 1.5 as the standard.</p>
 * @see java.awt.Button
 * @see java.awt.Canvas

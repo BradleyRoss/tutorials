@@ -18,11 +18,13 @@ public class DataGenerator
 	{ ; }
 	/**
 	 * Generate data according to a sine wave.
-	 * @param name
+	 * @param name name for data set
 	 * @param wavelength Wavelength of sine wave in milliseconds
 	 * @param duration Duration for which series is to be generated in milliseconds
 	 * @param interval Interval between data points in milliseconds - The value must be 
 	 *        greater than or equal to one second
+	 * @param magnitude maximum magnitude
+	 * @param offset offset from 0
 	 * @return TimeSeries containing data values
 	 */
 	public static TimeSeries generateSine(String name, long wavelength, long duration, long interval,

@@ -96,8 +96,8 @@ public class TickUnitCollection
 		 *    period.  In this case, the hour corresponding to the tick
 		 *    marks is shifted by an hour after the change.</p>
 		 * @param date Date to be used in selecting the character
-		 * @param toAppendTo
-		 * @param fieldPosition
+		 * @param toAppendTo string to which output is appended
+		 * @param fieldPosition TBD
 		 * @return Character N or M to indicate noon or midnight or a
 		 *         blank character to indicate other times.
 		 */

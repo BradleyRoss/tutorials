@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Closeable;
 import java.io.Flushable;
+import java.io.IOException;
 /**
  * Allows a single set of code to output results to
  * StringWriter, PrintStream and PrintWriter objects by providing a
@@ -101,8 +102,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#write(int)
 	 * @see PrintWriter#write(int)
 	 * @param n Value of byte to be written.
+	 * @throws IOException if io errors
 	 */
-	public void write(int n)
+	public void write(int n) throws IOException
 	{
 		if (writer != null)
 		{
@@ -118,8 +120,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(String)
 	 * @see PrintWriter#println(String)
 	 * @param value String to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(String value)
+	public void println(String value) throws IOException
 	{
 		if (writer != null)
 		{
@@ -137,8 +140,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintWriter#print(String)
 	 * 
 	 * @param value String to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(String value)
+	public void print(String value) throws IOException
 	{
 		if (writer != null)
 		{
@@ -154,8 +158,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#print(char)
 	 * @see PrintWriter#print(char)
 	 * @param c Character to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(char c)
+	public void print(char c) throws IOException
 	{
 		if (writer != null)
 		{
@@ -172,8 +177,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(String)
 	 * @see PrintWriter#println(String)
 	 * @param c Character to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(char c)
+	public void println(char c) throws IOException
 	{
 		print(c);
 		println();
@@ -200,18 +206,20 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(char[])
 	 * @see PrintWriter#println(char[])
 	 * @param c Character to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(char c[])
+	public void println(char c[]) throws IOException
 	{
 		print(c);
 		println();
 	}
 	/**
 	 * Terminate the line.
+	 * @throws IOException if io errors
 	 * @see PrintStream#println()
 	 * @see PrintWriter#println()
 	 */
-	public void println()
+	public void println() throws IOException
 	{
 		if (writer != null)
 		{
@@ -276,6 +284,7 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 *  then characters will be appended as if csq contained the four characters "null".
 	 *  @param start The index of the first character in the subsequence
 	 *  @param end The index of the character following the last character in the subsequence
+	 *  @throws IndexOutOfBoundsException if start and end values out of bounds
 	 */
 	public Appendable append(CharSequence csq, int start, int end) throws IndexOutOfBoundsException
 	{
@@ -299,7 +308,7 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 		if (writer != null)
 		{
 			writer.close();
-			
+
 		}
 		else if (stream != null)
 		{
@@ -316,7 +325,7 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 		if (writer != null)
 		{
 			writer.flush();
-			
+
 		}
 		else if (stream != null)
 		{
@@ -329,8 +338,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#print(int)
 	 * @see PrintWriter#print(int)
 	 * @param value integer value to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(int value)
+	public void print(int value) throws IOException
 	{
 		print(Integer.toString(value));
 	}
@@ -340,8 +350,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(int)
 	 * @see PrintWriter#println(int)
 	 * @param value integer value to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(int value)
+	public void println(int value) throws IOException
 	{
 		print(Integer.toString(value));
 		println();
@@ -352,8 +363,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(long)
 	 * @see PrintWriter#println(long)
 	 * @param value long integer value to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(long value)
+	public void print(long value) throws IOException
 	{
 		print(Long.toString(value));
 	}
@@ -363,8 +375,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(long)
 	 * @see PrintWriter#println(long)
 	 * @param value long integer value to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(long value)
+	public void println(long value) throws IOException
 	{
 		print(Long.toString(value));
 		println();
@@ -375,8 +388,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#print(boolean)
 	 * @see PrintWriter#print(boolean)
 	 * @param value boolean value to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(boolean value)
+	public void print(boolean value) throws IOException
 	{
 		print(Boolean.toString(value));
 	}
@@ -386,8 +400,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(boolean)
 	 * @see PrintWriter#println(boolean)
 	 * @param value Boolean value to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(boolean value)
+	public void println(boolean value) throws IOException
 	{
 		print(Boolean.toString(value));
 		println();
@@ -397,8 +412,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#print(double)
 	 * @see PrintWriter#print(double)
 	 * @param value Double-precision floating-point number to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(double value)
+	public void print(double value) throws IOException
 	{
 		print(Double.toString(value));
 	}
@@ -408,8 +424,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(double)
 	 * @see PrintWriter#println(double)
 	 * @param value Double-precision floating-point number to be printed
+	 * @throws IOException if io errors
 	 */
-	public void println(double value)
+	public void println(double value) throws IOException
 	{
 		print(Double.toString(value));
 		println();
@@ -420,8 +437,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(float)
 	 * @see PrintWriter#println(float)
 	 * @param value Floating-point number to be printed
+	 * @throws IOException if io errors
 	 */
-	public void print(float value)
+	public void print(float value) throws IOException
 	{
 		print(Float.toString(value));
 	}
@@ -431,8 +449,9 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 * @see PrintStream#println(float)
 	 * @see PrintWriter#println(float)
 	 * @param value Floating-point number to be printed
+	 * @throws IOException if io errors occur
 	 */
-	public void println(float value)
+	public void println(float value) throws IOException
 	{
 		print(Float.toString(value));
 		println();
@@ -444,26 +463,31 @@ public class GenericPrinter implements Appendable, Closeable, Flushable
 	 */
 	public static void main(String args[])
 	{
-		StringWriter writer;
-		System.out.println("Trying GenericPrinter for PrintStream System.out");
-		GenericPrinter instance = new GenericPrinter(System.out);
-		instance.println(instance.getUnderlyingObject().getClass().getName());
-		instance.println("Test");
-		instance.println(true);
-		System.out.println("Trying GenericPrinter for StringWriter");
-		writer = new StringWriter();
-		instance = new GenericPrinter(writer);
-		instance.println(instance.getUnderlyingObject().getClass().getName());
-		instance.println("Test");
-		instance.println(true);
-		System.out.println(instance.getUnderlyingObject().toString());
-		System.out.println("Using PrintWriter");
-		writer = new StringWriter();
-		instance = new GenericPrinter(new PrintWriter(writer));
-		instance.println(instance.getUnderlyingObject().getClass().getName());
-		instance.println("Test");
-		instance.println(true);
-		System.out.println(writer.toString());
-		System.out.println("End of program");
+		try {
+			StringWriter writer;
+			System.out.println("Trying GenericPrinter for PrintStream System.out");
+			GenericPrinter instance = new GenericPrinter(System.out);
+			instance.println(instance.getUnderlyingObject().getClass().getName());
+			instance.println("Test");
+			instance.println(true);
+			System.out.println("Trying GenericPrinter for StringWriter");
+			writer = new StringWriter();
+			instance = new GenericPrinter(writer);
+			instance.println(instance.getUnderlyingObject().getClass().getName());
+			instance.println("Test");
+			instance.println(true);
+			System.out.println(instance.getUnderlyingObject().toString());
+			System.out.println("Using PrintWriter");
+			writer = new StringWriter();
+			instance = new GenericPrinter(new PrintWriter(writer));
+			instance.println(instance.getUnderlyingObject().getClass().getName());
+			instance.println("Test");
+			instance.println(true);
+			System.out.println(writer.toString());
+			System.out.println("End of program");
+		} catch (IOException e) {
+			System.out.println(e.getClass().getName() + " " + e.getMessage());
+			e.printStackTrace();
+		}
 	}
 }

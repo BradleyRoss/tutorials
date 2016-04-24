@@ -81,6 +81,7 @@ public class SpreadsheetHelpers
 	/**
 	 * Prints the contents of a result set.
 	 * @param rs ResultSet to be printed
+	 * @throws SQLException if database errors
 	 */
 	public void listResultSet(java.sql.ResultSet rs)
 	throws SQLException
@@ -253,6 +254,8 @@ public class SpreadsheetHelpers
 	 * @param meta ResultSetMetaData from SQL query
 	 * @param columns XML statements specifying formatting
 	 *   of columns
+	 * @return contents of header
+	 * @throws SQLException if database errors
 	 */
 	protected String generateWorksheetHeader(ResultSet rs,
 			ResultSetMetaData meta, String columns) throws SQLException
@@ -302,6 +305,8 @@ public class SpreadsheetHelpers
 	 * @param worksheetName Name to be used for Excel spreadsheet.
 	 * @param rs ResultSet object to be used.
 	 * @return XML source for Excel spreadsheet
+	 * @throws SQLException if database errors
+	 * 
 	 * @see #newWorksheet(String, ResultSet, String)
 	 */
 	public String newWorksheet(String worksheetName, ResultSet rs)
@@ -320,6 +325,7 @@ public class SpreadsheetHelpers
 	 * @param columns String to be inserted into spreadsheet to define
 	 *        widths of columns
 	 * @return XML source for Excel spreadsheet
+	 * @throws SQLException if database errors
 	 */
 	public String newWorksheet(String worksheetName, ResultSet rs,
 			String columns) throws SQLException
@@ -340,6 +346,7 @@ public class SpreadsheetHelpers
 	 * @param breakColumn This is the number of the column that will be
 	 *        used for bursting the report
 	 * @return XML source for Excel spreadsheet
+	 * @throws SQLException if database errors
 	 */
 	public String newWorksheet(String worksheetName, ResultSet rs,
 			String columns, int breakColumn) throws SQLException

@@ -2,6 +2,7 @@ package bradleyross.library.helpers;
 import java.util.regex.Pattern;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.regex.Matcher;
@@ -99,32 +100,32 @@ public class StringHelpers
 	{
 		return Pattern.matches("^[0-9a-zA-Z]*$", value.trim());
 	}
-	public static void printJustified(String value)
+	public static void printJustified(String value) throws IOException
 	{
 		printJustified(System.out, value, 72);
 	}
-    public static void printJustified(String value, int length)
+    public static void printJustified(String value, int length) throws IOException
     {
     	printJustified(System.out, value, length);
     }
-    public static void printJustified(PrintStream output, String value)
+    public static void printJustified(PrintStream output, String value) throws IOException
     {
     	printJustified (output, value, 72);
     }
-    public static void printJustified(PrintWriter output, String value)
+    public static void printJustified(PrintWriter output, String value) throws IOException
     {
     	printJustified (output, value, 72);
     }
-    public static void printJustified(GenericPrinter output, String value)
+    public static void printJustified(GenericPrinter output, String value) throws IOException
     {
     	printJustified(output, value, 72);
     }
-	public static void printJustified(PrintStream output, String value, int length)
+	public static void printJustified(PrintStream output, String value, int length) throws IOException
 	{
 		GenericPrinter writer = new GenericPrinter(output);
 		printJustified(writer, value, length);
 	}
-	public static void printJustified(PrintWriter output, String value, int length)
+	public static void printJustified(PrintWriter output, String value, int length) throws IOException
 	{
 		GenericPrinter writer = new GenericPrinter(output);
 		printJustified(writer, value, length);
@@ -136,8 +137,9 @@ public class StringHelpers
 	 * @param value String to be sent to output
 	 * @param length Number of characters on a line after which the next space
 	 *        is to be replaced by a line feed.
+	 * @throws IOException if io errors
 	 */
-	protected static void printJustified(GenericPrinter output, String value, int length)
+	protected static void printJustified(GenericPrinter output, String value, int length) throws IOException
 	{
 		if (value == null)
 		{
@@ -306,6 +308,7 @@ public class StringHelpers
 	 */
 	public static void main(String args[])
 	{
+		try {
 		System.out.println("Starting test driver at " + (new java.util.Date()).toString());
 		System.out.println("***");
 		System.out.println("*** Tests for isDigitsOnly");
@@ -333,6 +336,9 @@ public class StringHelpers
 		for (int i = 0; i < list3.length; i++)
 		{
 			System.out.println(Boolean.toString(isAlphanumericOnly(list3[i])) + " " + list3[i]);
+		}
+		} catch (IOException e) {
+			System.out.println(e.getClass().getName() + " " + e.getMessage());
 		}
 	}
 }

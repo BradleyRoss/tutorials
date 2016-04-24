@@ -177,6 +177,7 @@ public class FileHelpers
 	 * given the name of the file.
 	 * @param name  File name
 	 * @return Contents of file
+	 * @throws IOException if io problems
 	 */
 	public static String readTextFile(String name)
 	throws java.io.IOException
@@ -239,6 +240,7 @@ public class FileHelpers
 	 * </ul>
 	 * @param address URL of desired contents
 	 * @return String
+	 * @throws IOException if io problems
 	 */
 	public static String readTextFile(java.net.URL address)
 	throws java.io.IOException
@@ -329,8 +331,9 @@ public class FileHelpers
 	 *    file.</p>
 	 * @param address URL of destination
 	 * @param data Byte array to be sent
-	 * @throws java.io.IOException
-	 * @throws java.net.SocketTimeoutException
+	 * @throws java.io.IOException if io problems
+	 * @throws java.net.SocketTimeoutException if timeout
+	 * 
 	 * @see java.net.URLConnection
 	 */
 	public static void sendBytes (java.net.URL address, byte[] data) 
@@ -385,7 +388,7 @@ public class FileHelpers
 	 * a byte stream (binary data).
 	 * @param address URL of destination
 	 * @param data File object containing data to be sent
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io problems
 	 */
 	public static void sendBytes (java.net.URL address, java.io.File data) 
 	throws java.io.IOException
@@ -525,7 +528,7 @@ public class FileHelpers
 	 * @param file File where data is to be written
 	 * @see URLConnection#setReadTimeout(int)
 	 * @see URLConnection#setConnectTimeout(int)
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io errors
 	 */
 	public static void getBytes(URL url, File file)
 	throws java.io.IOException
@@ -655,7 +658,7 @@ public class FileHelpers
 	 * 
 	 * @param input File containing data to be written
 	 * @param output OutputStream object where data is to be written
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io errors
 	 * @see File
 	 */
 	public static void getBytes(File input, OutputStream output)
@@ -737,7 +740,7 @@ public class FileHelpers
 	 * 
 	 * @param url URL of item to be copied
 	 * @param output OutputStream object where data is to be written
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io errors
 	 * 
 	 */
 	public static void getBytes(URL url, OutputStream output)
@@ -853,7 +856,7 @@ public class FileHelpers
 	 *    
 	 * @param input File object for file to be copied
 	 * @param output File object for copy of file to be created
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 * @see FileOutputStream
 	 */
 	public static void copyFile (File input, File output)
@@ -904,7 +907,7 @@ public class FileHelpers
 	 * 
 	 * @param inputFileName Name of file to be copied
 	 * @param outputFileName Name of copy of file to be created
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 * @see  bradleyross.library.helpers.tests.TestCopyFile
 	 */
 	public static void copyFile (String inputFileName, String outputFileName)
@@ -918,7 +921,7 @@ public class FileHelpers
 	 * Checks to see if directories for a file exist, and then
 	 * creates directories as appropriate.
 	 * @param newFile File object to be created
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io errors
 	 * @see File
 	 */
 	public static void fixDirs(File newFile)
@@ -953,7 +956,7 @@ public class FileHelpers
 	 * Checks to see if directories for a file exist, and then
 	 * creates directories as appropriate.
 	 * @param name Name of file or directory to be created
-	 * @throws java.io.IOException
+	 * @throws java.io.IOException if io problems
 	 * @see File
 	 */
 	public static void fixDirs(String name)
@@ -1072,6 +1075,7 @@ public class FileHelpers
 	 * @param outputFile Name of file to be generated
 	 * @param sizeX Width of generated image in pixels
 	 * @param sizeY Height of generated image in pixels
+	 * @throws IOException if io problems
 	 * @see BufferedImage
 	 * @see javax.imageio.ImageIO
 	 * @see java.awt.image.RenderedImage
@@ -1085,6 +1089,7 @@ public class FileHelpers
 	 * @param output  file to be generated
 	 * @param sizeX Width of generated image in pixels
 	 * @param sizeY Height of generated image in pixels
+	 * @throws IOException if io errors
 	 * @see BufferedImage
 	 * @see javax.imageio.ImageIO
 	 * @see java.awt.image.RenderedImage
@@ -1178,7 +1183,7 @@ public class FileHelpers
 	 * @param input Input file
 	 * @param output Output file
 	 * @param size Height and width of output image in pixels
-	 * @throws IOException
+	 * @throws IOException if io errors
 	 */
 	public static void thumbnail(String input, String output, int size) throws IOException
 	{
@@ -1188,7 +1193,7 @@ public class FileHelpers
 	 * Makes file with thumbnail image
 	 * @param input Input file
 	 * @param output Output file
-	 * @throws IOException
+	 * @throws IOException if io problems
 	 */
 	public static void thumbnail(String input, String output) throws IOException
 	{

@@ -43,11 +43,11 @@ public class ExtrasRegistration
 		 * calls the register method below.
 		 * 
 		 * @see #register(DatabaseExtras)
-		 * @param extrasObject
-		 * @throws ClassNotFoundException
-		 * @throws InstantiationException
-		 * @throws IllegalAccessException
-		 * @throws NotSupportedException
+		 * @param extrasObject Object containing additional information for database
+		 * @throws ClassNotFoundException if class not found
+		 * @throws InstantiationException if unable to create object
+		 * @throws IllegalAccessException if access not allowed
+		 * @throws NotSupportedException if not supported
 		 */
 		public Item(DatabaseExtras extrasObject) 
 		throws ClassNotFoundException, InstantiationException, IllegalAccessException, NotSupportedException
@@ -68,6 +68,7 @@ public class ExtrasRegistration
 		/**
 		 * Return the DatabaseExtras object that handles the
 		 * specific type of database.
+		 * 
 		 * @return DatabaseExtras object
 		 */
 		public DatabaseExtras getDatabaseExtras()
@@ -92,10 +93,10 @@ public class ExtrasRegistration
 	 * This method is called by the DatabaseExtras objects when they are instantiated.
 	 * @see DatabaseExtras
 	 * @param object DatabaseExtras object to be registered
-	 * @throws ClassNotFoundException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws NotSupportedException
+	 * @throws ClassNotFoundException if class not found
+	 * @throws InstantiationException if unable to create object
+	 * @throws IllegalAccessException if access not allowed
+	 * @throws NotSupportedException if not supported
 	 */
 	public static void register(DatabaseExtras object) 
 	throws ClassNotFoundException, InstantiationException, IllegalAccessException, NotSupportedException

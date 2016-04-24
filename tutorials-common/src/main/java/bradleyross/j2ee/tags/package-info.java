@@ -4,7 +4,7 @@
  * <p>Classes used for creating tags include the following:</p>
  * <ul>
  * <li>{@link javax.servlet.jsp.tagext.BodyTagSupport} (JSP tag)</li>
- * <li>{@link javax.servlet.jsp.tagext.ConditionalTagSupport} 
+ * <li>{@link javax.servlet.jsp.jstl.core.ConditionalTagSupport} 
  *       (JSTL library)</li>
  * <li>{@link javax.servlet.jsp.jstl.core.LoopTagSupport} (JSTL library)</li>
  * <li>{@link javax.servlet.jsp.tagext.SimpleTagSupport} (JSP tag)</li>

@@ -18,6 +18,7 @@ bradleyross/sound/BeeperPanel$3.class
 bradleyross/j2ee/listeners/SampleListener.class
 bradleyross/library/helpers/FrameHelpers.class
 bradleyross/demonstrations/SwingDemo$FlowDemo.class
+bradleyross/library/debugging/Log4j1Test.class
 bradleyross/library/database/SQLServer.class
 bradleyross/library/helpers/ExceptionHelper.class
 bradleyross/demonstrations/SwingDemo.class
@@ -74,6 +75,7 @@ bradleyross/j2ee/servlets/csvWriter2.class
 bradleyross/library/applets/ColorsSample.class
 bradleyross/library/database/DB2.class
 bradleyross/library/helpers/StringHelpers.class
+bradleyross/library/debugging/Log4j2Test.class
 bradleyross/library/database/Oracle.class
 bradleyross/library/helpers/TableInterface.class
 bradleyross/sound/BeeperPanel$7.class
@@ -111,6 +113,7 @@ bradleyross/opensource/xerces/XmlParser.class
 bradleyross/j2ee/servlets/CsvWriter$Instance.class
 bradleyross/library/helpers/FileHelpers.class
 bradleyross/sound/BeeperPanel$2.class
+bradleyross/library/debugging/Slf4jTest.class
 bradleyross/library/helpers/GenericPrinter.class
 bradleyross/library/database/ExtrasRegistration$Item.class
 bradleyross/j2ee/beans/ControlledObject.class

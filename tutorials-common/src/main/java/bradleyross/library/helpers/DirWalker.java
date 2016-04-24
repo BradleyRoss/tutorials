@@ -148,7 +148,7 @@ public class DirWalker implements Iterator<File> {
 	 * Constructor that results in list of all files that are
 	 * 	children of root directory.
 	 * @param rootValue root directory
-	 * @throws IOException
+	 * @throws IOException if io problems
 	 */
 	public  DirWalker (File rootValue) throws IOException {
 		if (!rootValue.isDirectory()) {
@@ -174,7 +174,7 @@ public class DirWalker implements Iterator<File> {
 	 *    contained in the file filter.
 	 * @param rootValue root directory
 	 * @param filterValue file filter
-	 * @throws IOException
+	 * @throws IOException if io problems
 	 */
 	public  DirWalker (File rootValue, FileFilter filterValue) throws IOException {
 		if (!rootValue.isDirectory()) {
@@ -272,6 +272,7 @@ public class DirWalker implements Iterator<File> {
 		/**
 		 * Constructor using depth first search.
 		 * @param value root directory
+		 * @throws IOException if io problems
 		 */
 		public DirIterator(File value) throws IOException {
 			if (!value.isDirectory()) {
@@ -498,6 +499,7 @@ public class DirWalker implements Iterator<File> {
 	/**
 	 * Test program for Level class.
 	 * @param value root directory
+	 * @throws IOException if io problems
 	 */
 	public void test1(File value) throws IOException {
 		Level test = new Level(value);
@@ -511,7 +513,7 @@ public class DirWalker implements Iterator<File> {
 	 * Test iterator for DirWalker class.
 	 * @param value root of directory structure
 	 * @return iterator
-	 * @throws IOException
+	 * @throws IOException if io problems
 	 */
 	public Iterator<File> test2(File value) throws IOException {
 		return new DirIterator(value);

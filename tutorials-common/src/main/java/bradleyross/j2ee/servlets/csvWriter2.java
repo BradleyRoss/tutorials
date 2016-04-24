@@ -135,6 +135,8 @@ public abstract class csvWriter2 extends HttpServlet
       }
    /**
    * Obtain the database connection information.
+   * @return database object
+   * @throws IOException if io error
    */
    protected abstract bradleyross.library.database.DatabaseProperties
          makeConnection() throws IOException;
@@ -145,6 +147,7 @@ public abstract class csvWriter2 extends HttpServlet
    *    method.</p>
    * @param req Request information
    * @return Result set
+   * @throws IOException if io errors
    * @see #message
    * @see #outputFilename
    */
@@ -152,6 +155,7 @@ public abstract class csvWriter2 extends HttpServlet
          throws java.io.IOException;
    /**
    * Will print header line for CSV file.
+   * @throws IOException if io errors
    */
    protected void printHeader ()
          throws java.io.IOException
@@ -174,6 +178,7 @@ public abstract class csvWriter2 extends HttpServlet
    * <p>This method will be changed at a later time to allow the
    *    specification of overriding methods for formatting timestamps,
    *    integers, floating point numbers, character strings, etc.</p>
+   * @throws IOException if io errors
    */
    protected void printLine ()
          throws java.io.IOException

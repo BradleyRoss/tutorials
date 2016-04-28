@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>bradleyross.pom-tutorials</groupId>
+    <artifactId>pom-tutorials-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>tutorials-log4j2</artifactId>
+  <name>Log4j 2.x example</name>
+  <dependencies>
+  		<dependency>
+			<groupId>bradleyross.pom-tutorials</groupId>
+			<artifactId>tutorials-common-filtered</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.5</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.5</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-1.2-api</artifactId>
+			<version>2.5</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.5</version>
+			<scope>compile</scope>
+		</dependency>
+		
+			<!--  
+			      If you want to use the slf4j logging api, you need
+			      to have a dependency for the org.slf4j:slf4j-api artifact 
+			      as well as the org.apache.logging.log4j:log4j-slf4j-impl
+			      artifact.
+			-->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.21</version>
+			<scope>compile</scope>
+		</dependency>
+
+ 
+  </dependencies>
+</project>

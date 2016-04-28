@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>bradleyross.pom-tutorials</groupId>
+   <artifactId>pom-tutorials-parent</artifactId>
+   <version>0.0.1-SNAPSHOT</version>   
+   <packaging>pom</packaging>
+   <modules>
+      <module>tutorials-webapp1</module>
+      <module>tutorials-common</module>
+      <module>tutorials-launch</module>
+      <module>tutorials-log4j2</module>
+      <module>tutorials-log4j1</module>
+      <module>tutorials-common-filtered</module>
+   </modules>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+<!-- 
+  http://stackoverflow.com/questions/15886209/maven-is-not-working-in-java-8-when-javadoc-tags-are-incomplete   
+  The Maven javadoc tool for Java 8 is very picky about correctly formed
+  HTML tags.  This option turns off the checking for Java 8.
+  
+  In creating a range of versions, a square bracket means inclusive while
+  a parenthesis means exclusive.
+  [1.8,) means every version from 1.8 onward
+  [1.8,1.9) means every version greater or equal to 1.8 and less than 1.9.
+  -->
+	<profiles>
+  		<profile>
+    		<id>doclint-java8-disable</id>
+    		<activation>
+      			<jdk>[1.8,)</jdk>
+    		</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.10.3</version>
+						<configuration>
+							<!--  
+								additionalparam element goes here
+								-Xdoclint:none</additionalparam 
+							-->
+							<!--  <additionalparam>-Xdoclint:none</additionalparam> -->
+							<linksource>true</linksource>
+							<quiet>true</quiet>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<build>
+		<plugins>
+			<plugin>
+<!--  
+   http://stackoverflow.com/questions/567996/can-maven-collect-all-the-dependent-jars-for-a-project-to-help-with-application 
+   This option places copies of all of the jar files in the target directory.
+-->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<configuration>
+					<quiet>true</quiet>
+					<outputDirectory>
+						${project.build.directory}
+					</outputDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<!-- 
+				      Some of the J2EE technologies require JRE 1.6
+				 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>

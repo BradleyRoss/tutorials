@@ -8,12 +8,7 @@
   <artifactId>tutorials-log4j1</artifactId>
   <name>Log4j 1.x example</name>
   <dependencies>
-  		<dependency>
-			<groupId>bradleyross.pom-tutorials</groupId>
-			<artifactId>tutorials-common-filtered</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
+
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
@@ -33,7 +28,33 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.7.21</version>
-    </dependency>    
+    </dependency> 
+    <!-- 
+          The log4j-to-slf4j adapter converts calls to the 
+          log4j 2 API to calls to the slf4j API.
+     -->
+    <dependency>
+      <groupId>org.apache.logging.log4j.adapters</groupId>
+      <artifactId>log4j-to-slf4j</artifactId>
+      <version>2.0-beta4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.5</version>
+    </dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>	    
+    <dependency>
+      <groupId>bradleyross.pom-tutorials</groupId>
+      <artifactId>tutorials-common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>   
   </dependencies>
   
 </project>

@@ -935,9 +935,9 @@ public class ExceptionHelper {
 			System.setProperty("catalina.home", System.getProperty("user.home"));
 		}
 		System.out.println(System.getProperty("catalina.home"));
-		org.slf4j.Logger logger2 = org.slf4j.LoggerFactory.getLogger(ExceptionHelper.class);
+		org.slf4j.Logger logger2 = org.slf4j.LoggerFactory.getLogger("test1");
 		org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger("test3");
-        org.apache.logging.log4j.Logger logger3 = org.apache.logging.log4j.LogManager.getLogger("test3");
+        org.apache.logging.log4j.Logger logger3 = org.apache.logging.log4j.LogManager.getLogger("test4");
 		ExceptionHelper helper = new ExceptionHelper(logger);
 		/*
 		 * Test of splitting input lines using line feeds and carriage returns.
@@ -968,7 +968,6 @@ public class ExceptionHelper {
 		/*
 		 *  Starting test with log4j2
 		 */
-		System.out.println("Starting test with log4j2");
 		ExceptionHelper helper3 = new ExceptionHelper(logger3);
 		helper3.info("Starting test with org.log4j2");
 		Runnable run3 = helper2.new Tester(helper2);

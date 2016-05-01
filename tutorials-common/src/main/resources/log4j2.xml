@@ -3,9 +3,9 @@
 <!-- 
 	http://logging.apache.org/log4j/2.x/faq.html#which_jars
  -->
-<Configuration status="TRACE">
+<Configuration status="INFO">
 	<Appenders>
-		<File name="file.default" fileName="${sys:user.home}/weblogs/log4j2.log" >
+		<File name="file.default" fileName="${sys:user.home}/weblogs/common.log" >
 			<PatternLayout>
 				<Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
 			</PatternLayout>
@@ -13,7 +13,7 @@
 	</Appenders>
  	<Loggers>
 		<Root level="info">
-			<AppenderRef ref="file.default" level="TRACE" />
+			<AppenderRef ref="file.default" level="INFO" />
 		</Root>
 	</Loggers>
 </Configuration>

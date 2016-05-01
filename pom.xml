@@ -14,7 +14,6 @@
       <module>tutorials-launch</module>
       <module>tutorials-log4j2</module>
       <module>tutorials-log4j1</module>
-      <module>tutorials-common-filtered</module>
    </modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,26 +34,38 @@
     		<activation>
       			<jdk>[1.8,)</jdk>
     		</activation>
-			<build>
+    		<!--  <additionalparam>-Xdoclint:none</additionalparam> -->
+			<reporting>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
 						<version>2.10.3</version>
 						<configuration>
-							<!--  
-								additionalparam element goes here
-								-Xdoclint:none</additionalparam 
-							-->
-							<!--  <additionalparam>-Xdoclint:none</additionalparam> -->
 							<linksource>true</linksource>
 							<quiet>true</quiet>
 						</configuration>
 					</plugin>
 				</plugins>
-			</build>
+			</reporting>
 		</profile>
 	</profiles>
+	<reporting>
+		<!-- 
+			It appears that maven-javadoc-plugin:2.10.3 has a dependency on log4j-1.2.14
+		 -->
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.10.3</version>
+						<configuration>
+							<linksource>true</linksource>
+							<quiet>true</quiet>
+						</configuration>
+					</plugin>
+				</plugins>
+			</reporting>
 	<build>
 		<plugins>
 			<plugin>
@@ -68,7 +79,7 @@
 				<configuration>
 					<quiet>true</quiet>
 					<outputDirectory>
-						${project.build.directory}
+						${project.build.directory}/dependencies
 					</outputDirectory>
 				</configuration>
 			</plugin>
@@ -80,24 +91,32 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.5.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
+				
 			</plugin>
 		</plugins>
 	</build>
+	<!-- 
+		This dependency is required because the maven-javadoc-plugin:2.10.3 has
+		a dependency on maven-core:2.2.1, which has direct or indirect
+		dependencies on sl4j-nop:1.5.3 and slf4j-jdk14:1.5.6.
+		
+		maven-core:2.2.1 : slf4j-jdk14:1.5.6
+		maven-core:2.2.1 : wagon-webdav-jackrabbit:1.0-beta-6 : slf4j-nop:1.5.3
+		
+		These dependencies caused conflicts when dealing with various logging
+		schemes that used different jar files.
+		
+		By inserting a dependency on maven-core:3.3.9, it forces the system
+		to use maven-core:3.3.9 instead of maven-core:2.2.1.  
+	 -->
 	<dependencies>
 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.1.0</version>
-			<scope>provided</scope>
+			<groupId>org.apache.maven</groupId>
+			<artifactId>maven-core</artifactId>
+			<version>3.3.9</version>
 		</dependency>
 	</dependencies>
 </project>

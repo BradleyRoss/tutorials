@@ -17,7 +17,11 @@ import java.util.List;
 import java.util.Properties;
 import java.util.ArrayList;
 /**
+ * This class  demonstrates how the logging framework can be used with JDBC
+ * access to databases.
  * 
+ * <p>Before using this class, it is necessary to insure that the database
+ *    is running and able to accept requests.</p>
  * @author Bradley Ross
  *
  * @see Connection
@@ -171,6 +175,10 @@ public class SQLExample {
 			helper.error("Error while closing connection", e);
 		}
 	}
+	/**
+	 * Test driver.
+	 * @param args not used in this class
+	 */
 	public static void main(String[] args) {
 
 		SQLExample instance = new SQLExample();

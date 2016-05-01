@@ -8,12 +8,11 @@
   <artifactId>tutorials-log4j2</artifactId>
   <name>Log4j 2.x example</name>
   <dependencies>
-  		<dependency>
-			<groupId>bradleyross.pom-tutorials</groupId>
-			<artifactId>tutorials-common-filtered</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
+    <dependency>
+      <groupId>bradleyross.pom-tutorials</groupId>
+      <artifactId>tutorials-common</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>  
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -38,7 +37,13 @@
 			<version>2.5</version>
 			<scope>compile</scope>
 		</dependency>
-		
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+			<optional>true</optional>
+		</dependency>			
 			<!--  
 			      If you want to use the slf4j logging api, you need
 			      to have a dependency for the org.slf4j:slf4j-api artifact 

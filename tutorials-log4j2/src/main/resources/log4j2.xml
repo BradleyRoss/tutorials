@@ -9,6 +9,8 @@
      However, when not using a Tomcat server, it is possible to change the
      value of the catalina.home Java system variable to a different 
      directory so that the logs will appear correctly.
+     
+     http://stackoverflow.com/questions/20975292/how-does-rollingfileappender-work-with-log4j2
  -->
 <Configuration status="WARN">
 	<Appenders>
@@ -17,10 +19,25 @@
 				<Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
 			</PatternLayout>
 		</File>
+		<!-- 
+			  The filePattern attribute for the RollingFile tag changes the name of the log file
+			  every minute so that you can see the name changes quickly.
+		 -->
+		<RollingFile name="file.rolling" fileName="${sys:user.home}/weblogs/log4j2Rolling.log"
+			filePattern="${sys:user.home}/weblogs/log4j2Rolling%d{yyyyMMdd-hh}.log">
+			<PatternLayout>
+				<Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" />
+				<SizeBasedTriggeringPolicy />
+			</Policies>		
+		</RollingFile>
 	</Appenders>
  	<Loggers>
 		<Root level="info">
-			<AppenderRef ref="file.default" level="TRACE" />
+			<AppenderRef ref="file.default" level="INFO" />
+			<AppenderRef ref="file.rolling" level="INFO" />
 		</Root>
 	</Loggers>
 </Configuration>

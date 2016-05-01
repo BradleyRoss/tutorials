@@ -48,7 +48,7 @@ public class DirWalker implements Iterator<File> {
 	/**
 	 * Maximum number of files to be returned.
 	 */
-	protected int maxCount = 2000;
+	protected int maxCount = 3000;
 	/**
 	 * Getter for {@link #maxCount} property.
 	 * @return value of property

@@ -20,7 +20,14 @@ import javax.swing.SwingUtilities;
 import bradleyross.library.helpers.ExceptionHelper;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-
+/**
+ * This will be the main class for the jar file.
+ * 
+ * It will open a Java Swing demostration that will
+ * drive the other classes.
+ * @author Bradley Ross
+ *
+ */
 public class MasterIndex {
 	protected ExceptionHelper logger = new ExceptionHelper(LogManager.getLogger());
 	protected JFrame frame = null;

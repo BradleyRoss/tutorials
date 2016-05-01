@@ -1,5 +1,5 @@
 /**
- * These are some examples of how tool for debugging can be used with
+ * These are some examples of how logging for debugging can be used with
  * Java classes.
  * 
  * @author Bradley Ross

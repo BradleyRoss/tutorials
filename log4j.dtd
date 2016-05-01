@@ -40,9 +40,10 @@ element. -->
 <!-- cannot be set to null. The "null" value for the threshold attribute -->
 <!-- simply means don't touch the threshold field, the threshold field   --> 
 <!-- keeps its old value.                                                -->
-     
+<!--
+  xmlns:log4j              CDATA #FIXED "http://jakarta.apache.org/log4j/"
+-->     
 <!ATTLIST log4j:configuration
-  xmlns:log4j              CDATA #FIXED "http://jakarta.apache.org/log4j/" 
   threshold                (all|trace|debug|info|warn|error|fatal|off|null) "null"
   debug                    (true|false|null)  "null"
   reset                    (true|false) "false"

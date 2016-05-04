@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package bradleyross.library.debugging;<a name="line.1"></a>
+<span class="sourceLineNo">002</span>import org.apache.log4j.Logger;<a name="line.2"></a>
+<span class="sourceLineNo">003</span>public class Log4j1Test implements Runnable {<a name="line.3"></a>
+<span class="sourceLineNo">004</span>        protected Logger logger = Logger.getLogger(Log4j1Test.class);<a name="line.4"></a>
+<span class="sourceLineNo">005</span>        public void run() {<a name="line.5"></a>
+<span class="sourceLineNo">006</span>                logger.info("Test");<a name="line.6"></a>
+<span class="sourceLineNo">007</span>                logger.error("This is the log4j 1.x API test");<a name="line.7"></a>
+<span class="sourceLineNo">008</span>        }<a name="line.8"></a>
+<span class="sourceLineNo">009</span>        public static void main(String[] args) {<a name="line.9"></a>
+<span class="sourceLineNo">010</span>                System.out.println("This is the log4j 1.x API test");<a name="line.10"></a>
+<span class="sourceLineNo">011</span>                Log4j1Test instance = new Log4j1Test();<a name="line.11"></a>
+<span class="sourceLineNo">012</span>                instance.run();<a name="line.12"></a>
+<span class="sourceLineNo">013</span>        }<a name="line.13"></a>
+<span class="sourceLineNo">014</span><a name="line.14"></a>
+<span class="sourceLineNo">015</span>}<a name="line.15"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

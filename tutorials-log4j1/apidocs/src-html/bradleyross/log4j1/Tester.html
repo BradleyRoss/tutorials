@@ -6,30 +6,34 @@
 </head>
 <body>
 <div class="sourceContainer">
-<pre><span class="sourceLineNo">001</span><a name="line.1"></a>
-<span class="sourceLineNo">002</span>package bradleyross.log4j1;<a name="line.2"></a>
-<span class="sourceLineNo">003</span>import bradleyross.library.debugging.Log4j1Test;<a name="line.3"></a>
-<span class="sourceLineNo">004</span>import bradleyross.library.debugging.Log4j2Test;<a name="line.4"></a>
-<span class="sourceLineNo">005</span>import bradleyross.library.debugging.Slf4jTest;<a name="line.5"></a>
+<pre><span class="sourceLineNo">001</span>package bradleyross.log4j1;<a name="line.1"></a>
+<span class="sourceLineNo">002</span>import bradleyross.library.debugging.Log4j1Test;<a name="line.2"></a>
+<span class="sourceLineNo">003</span>// import bradleyross.library.debugging.Log4j2Test;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import bradleyross.library.debugging.Slf4jTest;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import bradleyross.library.debugging.CommonsTest;<a name="line.5"></a>
 <span class="sourceLineNo">006</span>/**<a name="line.6"></a>
-<span class="sourceLineNo">007</span> * @author Bradley Ross<a name="line.7"></a>
-<span class="sourceLineNo">008</span> *<a name="line.8"></a>
-<span class="sourceLineNo">009</span> */<a name="line.9"></a>
-<span class="sourceLineNo">010</span>public class Tester {<a name="line.10"></a>
-<span class="sourceLineNo">011</span><a name="line.11"></a>
-<span class="sourceLineNo">012</span>        /**<a name="line.12"></a>
-<span class="sourceLineNo">013</span>         * @param args<a name="line.13"></a>
-<span class="sourceLineNo">014</span>         */<a name="line.14"></a>
-<span class="sourceLineNo">015</span>        public static void main(String[] args) {<a name="line.15"></a>
-<span class="sourceLineNo">016</span>                System.out.println("Logging test using log4j 1.x class files");<a name="line.16"></a>
-<span class="sourceLineNo">017</span>                String[] temp = {"a", "b"};<a name="line.17"></a>
-<span class="sourceLineNo">018</span>                Log4j1Test.main(temp);<a name="line.18"></a>
-<span class="sourceLineNo">019</span>                // Log4j2Test.main(temp);<a name="line.19"></a>
-<span class="sourceLineNo">020</span>                Slf4jTest.main(temp);<a name="line.20"></a>
-<span class="sourceLineNo">021</span><a name="line.21"></a>
-<span class="sourceLineNo">022</span>        }<a name="line.22"></a>
-<span class="sourceLineNo">023</span><a name="line.23"></a>
-<span class="sourceLineNo">024</span>}<a name="line.24"></a>
+<span class="sourceLineNo">007</span> * This class demonstrates the behavior of the log4j 1.x<a name="line.7"></a>
+<span class="sourceLineNo">008</span> * implementation classes in dealing with the log4j 1.x<a name="line.8"></a>
+<span class="sourceLineNo">009</span> * and slf4j API sets.<a name="line.9"></a>
+<span class="sourceLineNo">010</span> * @author Bradley Ross<a name="line.10"></a>
+<span class="sourceLineNo">011</span> *<a name="line.11"></a>
+<span class="sourceLineNo">012</span> */<a name="line.12"></a>
+<span class="sourceLineNo">013</span>public class Tester {<a name="line.13"></a>
+<span class="sourceLineNo">014</span><a name="line.14"></a>
+<span class="sourceLineNo">015</span>        /**<a name="line.15"></a>
+<span class="sourceLineNo">016</span>         * @param args<a name="line.16"></a>
+<span class="sourceLineNo">017</span>         */<a name="line.17"></a>
+<span class="sourceLineNo">018</span>        public static void main(String[] args) {<a name="line.18"></a>
+<span class="sourceLineNo">019</span>                System.out.println("Logging test using log4j 1.x class files");<a name="line.19"></a>
+<span class="sourceLineNo">020</span>                String[] temp = {"a", "b"};<a name="line.20"></a>
+<span class="sourceLineNo">021</span>                Log4j1Test.main(temp);<a name="line.21"></a>
+<span class="sourceLineNo">022</span>                // Log4j2Test.main(temp);<a name="line.22"></a>
+<span class="sourceLineNo">023</span>                Slf4jTest.main(temp);<a name="line.23"></a>
+<span class="sourceLineNo">024</span>                CommonsTest.main(temp);<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>        }<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>}<a name="line.28"></a>
 
 
 

@@ -35,7 +35,7 @@
       			<jdk>[1.8,)</jdk>
     		</activation>
     		<!--  <additionalparam>-Xdoclint:none</additionalparam> -->
-			<reporting>
+			<build>
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -47,10 +47,10 @@
 						</configuration>
 					</plugin>
 				</plugins>
-			</reporting>
+			</build>
 		</profile>
 	</profiles>
-	<reporting>
+	<build>
 		<!-- 
 			It appears that maven-javadoc-plugin:2.10.3 has a dependency on log4j-1.2.14
 		 -->
@@ -64,10 +64,8 @@
 							<quiet>true</quiet>
 						</configuration>
 					</plugin>
-				</plugins>
-			</reporting>
-	<build>
-		<plugins>
+
+		
 			<plugin>
 <!--  
    http://stackoverflow.com/questions/567996/can-maven-collect-all-the-dependent-jars-for-a-project-to-help-with-application 

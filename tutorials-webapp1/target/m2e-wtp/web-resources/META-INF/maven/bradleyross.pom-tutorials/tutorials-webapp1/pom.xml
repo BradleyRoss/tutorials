@@ -18,7 +18,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>bradleyross.pom-tutorials</groupId>
-			<artifactId>tutorials-common-filtered</artifactId>
+			<artifactId>tutorials-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>

@@ -1,12 +1,12 @@
 package bradleyross.library.tools;
 
-import javax.swing.JApplet;
-import javax.swing.event.*;
-import javax.swing.border.*;
-import java.awt.event.*;
-import java.awt.*;
-import javax.swing.event.MenuListener;
-import javax.swing.event.MenuEvent;
+// import javax.swing.JApplet;
+// import javax.swing.event.*;
+// import javax.swing.border.*;
+//  import java.awt.event.*;
+// import java.awt.*;
+// import javax.swing.event.MenuListener;
+// import javax.swing.event.MenuEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.GridBagLayout;
@@ -18,7 +18,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JMenuBar;
 import javax.swing.SwingUtilities;
 import bradleyross.library.helpers.ExceptionHelper;
-import org.apache.logging.log4j.Logger;
+// import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 /**
  * This will be the main class for the jar file.
@@ -54,9 +54,7 @@ public class MasterIndex {
 
 		public void actionPerformed(ActionEvent e) {
 			System.out.println(e.getActionCommand());
-			
 		}
-		
 	}
 	public class MainPage implements Runnable {
 		public void run() {
@@ -65,24 +63,19 @@ public class MasterIndex {
 			menuBar = new JMenuBar();
 			frame.setJMenuBar(menuBar);
 			buildMenuBar(menuBar);
-			frame.setVisible(true);
-			
-			
-			
-			
+			frame.setVisible(true);		
 		}
 	}
 	@SuppressWarnings("serial")
 	public class Body extends JPanel  {
-	GridBagConstraints c = new GridBagConstraints();
-	GridBagConstraints cEnd = new GridBagConstraints();
-	GridBagLayout layout = new GridBagLayout();
-
+		GridBagConstraints c = new GridBagConstraints();
+		GridBagConstraints cEnd = new GridBagConstraints();
+		GridBagLayout layout = new GridBagLayout();
 	}
 	public void launch() {
 		System.out.println("Starting launch");
 		try {
-		SwingUtilities.invokeLater(new MainPage());
+			SwingUtilities.invokeLater(new MainPage());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

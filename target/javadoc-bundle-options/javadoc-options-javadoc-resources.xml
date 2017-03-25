@@ -3,8 +3,24 @@
   <docletArtifacts>
     <docletArtifact />
   </docletArtifacts>
+  <offlineLinks>
+    <offlineLink>
+      <url>http://www.slf4j.org/api/</url>
+      <location>../slf4j</location>
+    </offlineLink>
+  </offlineLinks>
   <tagletArtifacts>
     <tagletArtifact />
   </tagletArtifacts>
+  <links>
+    <link>https://docs.oracle.com/javase/8/docs/api/</link>
+    <link>https://docs.oracle.com/javaee/6/api/</link>
+    <link>http://www.jfree.org/jfreechart/api/javadoc/</link>
+    <link>http://www.jfree.org/jcommon/api/</link>
+    <link>http://jackcess.sourceforge.net/apidocs/</link>
+    <link>https://commons.apache.org/proper/commons-logging/apidocs/</link>
+    <link>https://logging.apache.org/log4j/2.x/log4j-api/apidocs/</link>
+    <link>http://logging.apache.org/log4j/2.x/log4j-1.2-api/apidocs/</link>
+  </links>
   <javadocResourcesDirectory>src/main/javadoc</javadocResourcesDirectory>
 </javadocOptions>

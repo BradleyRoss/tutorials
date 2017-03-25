@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html>
+<head><title>Test using XML on UTF-8</title>
+<meta charset="UTF-8" />
+</head>
+<body>
+<p>This is a test</p>    
+</body>
+</html>

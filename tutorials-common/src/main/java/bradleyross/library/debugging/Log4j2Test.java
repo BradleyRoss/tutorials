@@ -5,6 +5,8 @@ import org.apache.logging.log4j.LogManager;
 /**
  * Tests use of the log4j 2.x API with the system.
  * @author Bradley Ross
+ * @see org.apache.logging.log4j.Logger
+ * @see org.apache.logging.log4j.LogManager
  *
  */
 public class Log4j2Test implements Runnable {

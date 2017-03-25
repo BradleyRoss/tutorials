@@ -30,7 +30,7 @@ public class ToneGenerator extends JApplet {
 
 
 	/**
-	 * This is the control panel for the tone generator.
+	 * This is the control panel for the tone generator (incomplete).
 	 * @author Bradley Ross
 	 *
 	 */

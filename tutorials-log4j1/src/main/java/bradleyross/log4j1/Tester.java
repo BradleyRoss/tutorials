@@ -11,9 +11,9 @@ import bradleyross.library.debugging.CommonsTest;
  *
  */
 public class Tester {
-
 	/**
-	 * @param args
+	 * Test driver.
+	 * @param args not used in this class
 	 */
 	public static void main(String[] args) {
 		System.out.println("Logging test using log4j 1.x class files");
@@ -22,7 +22,5 @@ public class Tester {
 		// Log4j2Test.main(temp);
 		Slf4jTest.main(temp);
 		CommonsTest.main(temp);
-
 	}
-
 }

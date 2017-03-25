@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
  * Tests the ability of the system to use the log4j 1.x API.
  * 
  * @author Bradley Ross
+ * @see org.apache.log4j.Logger
  *
  */
 public class Log4j1Test implements Runnable {

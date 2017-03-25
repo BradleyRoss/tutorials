@@ -9,7 +9,8 @@ import bradleyross.library.debugging.CommonsTest;
  * exceptions using the log4j 2.x environment.
  * 
  * <p>The dependencies specified in the pom allow use of 
- *    log4j, log4j2, and slf4j logging API's.</p>
+ *    Apache Commons Logging,
+ *    Apache log4j, Apache log4j 2, and slf4j logging API's.</p>
  * 
  * @author Bradley Ross
  *

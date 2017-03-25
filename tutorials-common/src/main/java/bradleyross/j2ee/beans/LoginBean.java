@@ -30,7 +30,7 @@ import org.apache.logging.log4j.LogManager;
 @RequestScoped
 public class LoginBean implements Serializable {
 	protected Logger logger = null;
-	/**;
+	/**
 	 * This constructor reads the HTTP request parameter name and places
 	 * it in the user name field of the form.
 	 * 

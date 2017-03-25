@@ -29,7 +29,7 @@ import bradleyross.library.helpers.DateHelpers;
 public class TimeSeriesExample2 {
 
 	/**
-	 * @param args
+	 * @param args not used for this class
 	 */
 	public static void main(String[] args) 
 	{

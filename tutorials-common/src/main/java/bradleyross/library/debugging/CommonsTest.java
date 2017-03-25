@@ -7,6 +7,8 @@ import org.apache.commons.logging.LogFactory;
  * 
  * <p>See https://cyntech.wordpress.com/2009/01/09/how-to-use-commons-logging/ </p>
  * @author Bradley Ross
+ * @see org.apache.commons.logging.Log
+ * @see org.apache.commons.logging.LogFactory
  *
  */
 public class CommonsTest implements Runnable {

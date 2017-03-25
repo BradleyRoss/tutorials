@@ -24,7 +24,7 @@ import org.jfree.data.time.TimeSeriesCollection;
 public class TimeSeriesExample {
 
 	/**
-	 * @param args
+	 * @param args not used for this case
 	 */
 	public static void main(String[] args) 
 	{

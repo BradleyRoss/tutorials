@@ -14,6 +14,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/xerces/package-info.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/local/databases/DatabaseConnection.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/tags/package-info.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/xerces/TestXmlParser.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/TableInterface.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/GenericPrinter.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/beans/package-info.java
@@ -32,9 +33,11 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/Address.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/Servlet.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/tests/TestCopyFile.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/swing/SwingDemo.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/common/sqlHelper.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/applets/ScrollbarSample.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/StringHelpers.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/pdfbox/PdfTest1.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/sound/Beeper.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/GetFile.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/debugging/package-info.java
@@ -45,6 +48,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/jfreechart/First.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/debugging/SQLExample.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/ServletHelpers.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/swing/package-info.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/NumberPage.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/servlets/package-info.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/FileHelpers.java
@@ -96,6 +100,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/xerces/XmlParser.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/common/processList.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/tags/ConvertToComment.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/pdfbox/package-info.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/helpers/ExceptionProcessor.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/tags/Body.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/tags/DefaultTag.java
@@ -108,6 +113,7 @@
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/j2ee/beans/LoginBean.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/opensource/poi/package-info.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/common/httpHelper.java
+/Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/swing/SwingTimer.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/database/ExtrasRegistration.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/library/database/MySQL.java
 /Users/bradleyross/Development2016/Git2016/Master/bradleyross-training/tutorials-restart/tutorials/tutorials-common/src/main/java/bradleyross/demonstrations/SwingDemo.java

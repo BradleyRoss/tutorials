@@ -463,7 +463,9 @@ class BeeperPanel extends JPanel {
 		}
 	}
 
-	/** Provides the byte value for this point in the sinusoidal wave. */
+	/** 
+	 * Provides the byte value for this point in the sinusoidal wave. 
+	 */
 	private static byte getByteValue(double angle) {
 		int maxVol = 127;
 		return (new Integer(

@@ -1,5 +1,6 @@
 package bradleyross.opensource.xerces;
 import java.util.Vector;
+import java.net.URL;
 /**
  * This is the demonstration driver for the class {@link XmlParser}.
  * 

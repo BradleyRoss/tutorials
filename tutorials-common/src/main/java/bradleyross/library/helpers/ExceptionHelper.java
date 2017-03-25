@@ -367,15 +367,36 @@ public class ExceptionHelper {
 	public static final int INFO  = 4;
 	public static final int DEBUG = 5;
 	public static final int TRACE = 6;
+	/**
+	 * Logger for use with log4j 1.x logging framework API.
+	 */
 	protected org.apache.log4j.Logger apacheLogger = null;
+	/** 
+	 * Logger for use with slf4j logging framework API.
+	 */
 	protected org.slf4j.Logger slf4jLogger = null;
+	/**
+	 * Logger for use with log4j 2 logging framework API.
+	 */
 	protected org.apache.logging.log4j.Logger log4j2Logger = null;
+	/**
+	 * Constructor for working with log4j 1 logging framework API.
+	 * @param logger Logger object to which messages will be passed.
+	 */
 	public ExceptionHelper(org.apache.log4j.Logger logger) {
 		apacheLogger = logger;
 	}
+	/**
+	 * Constructor for working with slf4j logging framework API.
+	 * @param logger Logger object to which messages will be sent.
+	 */
 	public ExceptionHelper(org.slf4j.Logger logger) {
 		slf4jLogger = logger;
 	}
+	/**
+	 * Constructor for working with log4j 2 logging framework API.
+	 * @param logger Logger object to which messages will be sent.
+	 */
 	public ExceptionHelper(org.apache.logging.log4j.Logger logger) {
 		log4j2Logger = logger;
 	}
@@ -385,7 +406,7 @@ public class ExceptionHelper {
 	 */
 	protected ExceptionProcessor extra = new DummyExceptionProcessor();
 	/**
-	 * Setter for {@link #extra}
+	 * Setter for {@link #extra} allowing additional features to be added.
 	 * @param value object to be used for extra processing
 	 */
 	public void setExceptionProcessor(ExceptionProcessor value) {

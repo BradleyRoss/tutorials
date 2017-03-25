@@ -16,7 +16,9 @@ bradleyross.library.tools
 bradleyross.local.databases
 bradleyross.opensource.jfreechart
 bradleyross.opensource.jfreechart.helpers
+bradleyross.opensource.pdfbox
 bradleyross.opensource.poi
 bradleyross.opensource.xerces
 bradleyross.opensource.zxing
 bradleyross.sound
+bradleyross.swing

@@ -471,16 +471,18 @@
 <span class="sourceLineNo">463</span>                }<a name="line.463"></a>
 <span class="sourceLineNo">464</span>        }<a name="line.464"></a>
 <span class="sourceLineNo">465</span><a name="line.465"></a>
-<span class="sourceLineNo">466</span>        /** Provides the byte value for this point in the sinusoidal wave. */<a name="line.466"></a>
-<span class="sourceLineNo">467</span>        private static byte getByteValue(double angle) {<a name="line.467"></a>
-<span class="sourceLineNo">468</span>                int maxVol = 127;<a name="line.468"></a>
-<span class="sourceLineNo">469</span>                return (new Integer(<a name="line.469"></a>
-<span class="sourceLineNo">470</span>                                (int)Math.round(<a name="line.470"></a>
-<span class="sourceLineNo">471</span>                                                Math.sin(angle)*maxVol))).<a name="line.471"></a>
-<span class="sourceLineNo">472</span>                                                byteValue();<a name="line.472"></a>
-<span class="sourceLineNo">473</span>        }<a name="line.473"></a>
-<span class="sourceLineNo">474</span>}<a name="line.474"></a>
-<span class="sourceLineNo">475</span><a name="line.475"></a>
+<span class="sourceLineNo">466</span>        /** <a name="line.466"></a>
+<span class="sourceLineNo">467</span>         * Provides the byte value for this point in the sinusoidal wave. <a name="line.467"></a>
+<span class="sourceLineNo">468</span>         */<a name="line.468"></a>
+<span class="sourceLineNo">469</span>        private static byte getByteValue(double angle) {<a name="line.469"></a>
+<span class="sourceLineNo">470</span>                int maxVol = 127;<a name="line.470"></a>
+<span class="sourceLineNo">471</span>                return (new Integer(<a name="line.471"></a>
+<span class="sourceLineNo">472</span>                                (int)Math.round(<a name="line.472"></a>
+<span class="sourceLineNo">473</span>                                                Math.sin(angle)*maxVol))).<a name="line.473"></a>
+<span class="sourceLineNo">474</span>                                                byteValue();<a name="line.474"></a>
+<span class="sourceLineNo">475</span>        }<a name="line.475"></a>
+<span class="sourceLineNo">476</span>}<a name="line.476"></a>
+<span class="sourceLineNo">477</span><a name="line.477"></a>
 
 
 

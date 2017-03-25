@@ -8,13 +8,13 @@
 <div class="sourceContainer">
 <pre><span class="sourceLineNo">001</span>package bradleyross.library.tools;<a name="line.1"></a>
 <span class="sourceLineNo">002</span><a name="line.2"></a>
-<span class="sourceLineNo">003</span>import javax.swing.JApplet;<a name="line.3"></a>
-<span class="sourceLineNo">004</span>import javax.swing.event.*;<a name="line.4"></a>
-<span class="sourceLineNo">005</span>import javax.swing.border.*;<a name="line.5"></a>
-<span class="sourceLineNo">006</span>import java.awt.event.*;<a name="line.6"></a>
-<span class="sourceLineNo">007</span>import java.awt.*;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import javax.swing.event.MenuListener;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import javax.swing.event.MenuEvent;<a name="line.9"></a>
+<span class="sourceLineNo">003</span>// import javax.swing.JApplet;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>// import javax.swing.event.*;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>// import javax.swing.border.*;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>//  import java.awt.event.*;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>// import java.awt.*;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>// import javax.swing.event.MenuListener;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>// import javax.swing.event.MenuEvent;<a name="line.9"></a>
 <span class="sourceLineNo">010</span>import java.awt.event.ActionEvent;<a name="line.10"></a>
 <span class="sourceLineNo">011</span>import java.awt.event.ActionListener;<a name="line.11"></a>
 <span class="sourceLineNo">012</span>import java.awt.GridBagLayout;<a name="line.12"></a>
@@ -26,7 +26,7 @@
 <span class="sourceLineNo">018</span>import javax.swing.JMenuBar;<a name="line.18"></a>
 <span class="sourceLineNo">019</span>import javax.swing.SwingUtilities;<a name="line.19"></a>
 <span class="sourceLineNo">020</span>import bradleyross.library.helpers.ExceptionHelper;<a name="line.20"></a>
-<span class="sourceLineNo">021</span>import org.apache.logging.log4j.Logger;<a name="line.21"></a>
+<span class="sourceLineNo">021</span>// import org.apache.logging.log4j.Logger;<a name="line.21"></a>
 <span class="sourceLineNo">022</span>import org.apache.logging.log4j.LogManager;<a name="line.22"></a>
 <span class="sourceLineNo">023</span>/**<a name="line.23"></a>
 <span class="sourceLineNo">024</span> * This will be the main class for the jar file.<a name="line.24"></a>
@@ -62,45 +62,38 @@
 <span class="sourceLineNo">054</span><a name="line.54"></a>
 <span class="sourceLineNo">055</span>                public void actionPerformed(ActionEvent e) {<a name="line.55"></a>
 <span class="sourceLineNo">056</span>                        System.out.println(e.getActionCommand());<a name="line.56"></a>
-<span class="sourceLineNo">057</span>                        <a name="line.57"></a>
-<span class="sourceLineNo">058</span>                }<a name="line.58"></a>
-<span class="sourceLineNo">059</span>                <a name="line.59"></a>
-<span class="sourceLineNo">060</span>        }<a name="line.60"></a>
-<span class="sourceLineNo">061</span>        public class MainPage implements Runnable {<a name="line.61"></a>
-<span class="sourceLineNo">062</span>                public void run() {<a name="line.62"></a>
-<span class="sourceLineNo">063</span>                        frame = new JFrame();<a name="line.63"></a>
-<span class="sourceLineNo">064</span>                        frame.setSize(300, 200);<a name="line.64"></a>
-<span class="sourceLineNo">065</span>                        menuBar = new JMenuBar();<a name="line.65"></a>
-<span class="sourceLineNo">066</span>                        frame.setJMenuBar(menuBar);<a name="line.66"></a>
-<span class="sourceLineNo">067</span>                        buildMenuBar(menuBar);<a name="line.67"></a>
-<span class="sourceLineNo">068</span>                        frame.setVisible(true);<a name="line.68"></a>
-<span class="sourceLineNo">069</span>                        <a name="line.69"></a>
-<span class="sourceLineNo">070</span>                        <a name="line.70"></a>
-<span class="sourceLineNo">071</span>                        <a name="line.71"></a>
-<span class="sourceLineNo">072</span>                        <a name="line.72"></a>
-<span class="sourceLineNo">073</span>                }<a name="line.73"></a>
+<span class="sourceLineNo">057</span>                }<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        }<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        public class MainPage implements Runnable {<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                public void run() {<a name="line.60"></a>
+<span class="sourceLineNo">061</span>                        frame = new JFrame();<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                        frame.setSize(300, 200);<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                        menuBar = new JMenuBar();<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                        frame.setJMenuBar(menuBar);<a name="line.64"></a>
+<span class="sourceLineNo">065</span>                        buildMenuBar(menuBar);<a name="line.65"></a>
+<span class="sourceLineNo">066</span>                        frame.setVisible(true);         <a name="line.66"></a>
+<span class="sourceLineNo">067</span>                }<a name="line.67"></a>
+<span class="sourceLineNo">068</span>        }<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        @SuppressWarnings("serial")<a name="line.69"></a>
+<span class="sourceLineNo">070</span>        public class Body extends JPanel  {<a name="line.70"></a>
+<span class="sourceLineNo">071</span>                GridBagConstraints c = new GridBagConstraints();<a name="line.71"></a>
+<span class="sourceLineNo">072</span>                GridBagConstraints cEnd = new GridBagConstraints();<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                GridBagLayout layout = new GridBagLayout();<a name="line.73"></a>
 <span class="sourceLineNo">074</span>        }<a name="line.74"></a>
-<span class="sourceLineNo">075</span>        @SuppressWarnings("serial")<a name="line.75"></a>
-<span class="sourceLineNo">076</span>        public class Body extends JPanel  {<a name="line.76"></a>
-<span class="sourceLineNo">077</span>        GridBagConstraints c = new GridBagConstraints();<a name="line.77"></a>
-<span class="sourceLineNo">078</span>        GridBagConstraints cEnd = new GridBagConstraints();<a name="line.78"></a>
-<span class="sourceLineNo">079</span>        GridBagLayout layout = new GridBagLayout();<a name="line.79"></a>
-<span class="sourceLineNo">080</span><a name="line.80"></a>
-<span class="sourceLineNo">081</span>        }<a name="line.81"></a>
-<span class="sourceLineNo">082</span>        public void launch() {<a name="line.82"></a>
-<span class="sourceLineNo">083</span>                System.out.println("Starting launch");<a name="line.83"></a>
-<span class="sourceLineNo">084</span>                try {<a name="line.84"></a>
-<span class="sourceLineNo">085</span>                SwingUtilities.invokeLater(new MainPage());<a name="line.85"></a>
-<span class="sourceLineNo">086</span>                } catch (Exception e) {<a name="line.86"></a>
-<span class="sourceLineNo">087</span>                        e.printStackTrace();<a name="line.87"></a>
-<span class="sourceLineNo">088</span>                }<a name="line.88"></a>
-<span class="sourceLineNo">089</span>        }<a name="line.89"></a>
-<span class="sourceLineNo">090</span>        public static void main(String[] args) {<a name="line.90"></a>
-<span class="sourceLineNo">091</span>                System.out.println("Starting program");<a name="line.91"></a>
-<span class="sourceLineNo">092</span>                MasterIndex instance = new MasterIndex();<a name="line.92"></a>
-<span class="sourceLineNo">093</span>                instance.launch();<a name="line.93"></a>
-<span class="sourceLineNo">094</span>        }<a name="line.94"></a>
-<span class="sourceLineNo">095</span>}<a name="line.95"></a>
+<span class="sourceLineNo">075</span>        public void launch() {<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                System.out.println("Starting launch");<a name="line.76"></a>
+<span class="sourceLineNo">077</span>                try {<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                        SwingUtilities.invokeLater(new MainPage());<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                } catch (Exception e) {<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                        e.printStackTrace();<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                }<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        }<a name="line.82"></a>
+<span class="sourceLineNo">083</span>        public static void main(String[] args) {<a name="line.83"></a>
+<span class="sourceLineNo">084</span>                System.out.println("Starting program");<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                MasterIndex instance = new MasterIndex();<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                instance.launch();<a name="line.86"></a>
+<span class="sourceLineNo">087</span>        }<a name="line.87"></a>
+<span class="sourceLineNo">088</span>}<a name="line.88"></a>
 
 
 

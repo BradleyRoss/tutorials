@@ -3,4 +3,5 @@
 *.jar
 *.war
 *.class
+target/
 

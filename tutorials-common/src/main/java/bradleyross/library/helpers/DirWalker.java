@@ -526,9 +526,9 @@ public class DirWalker implements Iterator<File> {
 		try {
 			File root = new File("/");
 			DirWalker instance = new DirWalker(root);
-			instance.test1(new File("/Users/bradleyross/AmtrakDesktop"));
+			instance.test1(new File("/Users/bradleyross/Pictures"));
 			System.out.println("Starting second test");
-			Iterator<File> second = instance.test2(new File("/Users/bradleyross/AmtrakDesktop"));
+			Iterator<File> second = instance.test2(new File("/Users/bradleyross/Pictures"));
 			while (second.hasNext()) {
 				File item = second.next();
 				System.out.println(item.getAbsolutePath());
